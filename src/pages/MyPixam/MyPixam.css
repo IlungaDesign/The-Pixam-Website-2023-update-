@@ -1,0 +1,331 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.my-pixam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-color: yellow;*/
+    width: 100%;
+    height: 130vh
+}
+
+/*---a wrapper so that i can aline the 2 div (profiel-gegevens
+and profiel-online*/
+
+.section-register {
+    /*background-color: #c0dffb;*/
+    width: 90%;
+    height: 110vh;
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+    /*align-items: center;*/
+    margin-top: 15px;
+    border-radius: 20px;
+    border: 1px solid #d7d5d5;
+}
+
+.profiel-gegevens {
+    /*background-color: violet;*/
+    height: 70vh;
+    width: 35%;
+    margin-top: 20px;
+    margin-left: 190px;
+    /*border-right: 1px solid #9a9a9a;*/
+}
+
+.profiel-online {
+    /*background-color: red;*/
+    height: 90vh;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.profiel-gegevens div {
+    margin-bottom: 10px;
+}
+
+.profiel-gegevens label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.profiel-gegevens #gender {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.profiel-gegevens form input {
+    padding: 5px;
+    font-size: 13px;
+    font-family: Poppins;
+    width: 300px;
+    height: 35px;
+    border-radius: 20px;
+    border: 1px solid #d7d5d5;
+    color: #9a9a9a;
+    margin: 8px;
+}
+
+.profiel-gegevens form div #myFile {
+    background-image: url("../../images/icon_picture_upload5.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0px solid #d7d5d5;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    margin-left: 10px;
+    z-index: 2;
+    /*background-color: darkviolet;*/
+    background-color: transparent;
+    color: transparent;
+}
+
+
+.profiel-gegevens form div img {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+
+}
+
+.profiel-gegevens h1 {
+    color: #008bff;
+    margin-bottom: 10px;
+}
+
+/*-----------we style the div (profiel-online)--------*/
+
+.profiel-online div {
+    margin-bottom: 5px;
+}
+
+.profiel-online label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.profiel-online form input {
+    padding: 5px;
+    font-size: 13px;
+    font-family: Poppins;
+    width: 300px;
+    height: 35px;
+    border-radius: 20px;
+    border: 1px solid #d7d5d5;
+    color: #9a9a9a;
+    margin: 8px;
+
+}
+
+.profiel-online h1 {
+    color: #008bff;
+    margin-bottom: 10px;
+}
+
+.form-profiel-online div Link {
+    background-color: #ff7e00;
+    padding: 10px 25px 10px 25px;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.form-profiel-online div Link:hover {
+    background-color: #d46a02;
+}
+
+.form-profiel-online div {
+    padding: 5px;
+}
+
+.profiel-online-social-media {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/*-------------we style the submit buttton (registreren)----------------*/
+
+.my-pixam button[type=submit] {
+    background-color: #02be6e;
+    color: white;
+    padding: 12px 21px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 300px;
+    position: absolute;
+    top: 910px;
+}
+
+.my-pixam button[type=submit]:hover {
+    background-color: #028f53;
+}
+
+/*-----we style the media query screen 1000px here----*/
+
+@media screen and (max-width: 1146px) {
+
+    .my-pixam {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 180vh;
+    }
+    .section-register {
+        width: 90%;
+        height: 175vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 100px;
+    }
+
+    .profiel-gegevens {
+        height: 70vh;
+        width: 90%;
+        margin-left: 30px;
+    }
+
+    .profiel-online {
+        height: 90vh;
+        width: 90%;
+        margin-left: 30px;
+    }
+
+    .form-profiel-online div Link {
+        background-color: #ff7e00;
+        padding: 7px 13px;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 54px;
+    }
+
+    .profiel-online-social-media {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+
+    .my-pixam button[type=submit] {
+        display: block;
+        position: absolute;
+        top: 1480px;
+    }
+}
+
+/*-----we style the media query screen 576px here----*/
+
+@media screen and (max-width: 576px) {
+    .my-pixam {
+        height: 225vh;
+    }
+    .section-register {
+        width: 90%;
+        height: 220vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0px;
+    }
+
+    .profiel-gegevens {
+        height: 90vh;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .profiel-online {
+        height: 120vh;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .profiel-gegevens label {
+        font-size: 12px;
+        margin-left: 25px;
+    }
+
+    .profiel-gegevens #gender {
+        height: 42px;
+        margin-left: 0px;
+    }
+
+    .profiel-gegevens form input {
+        font-size: 12px;
+        margin-left: 25px;
+    }
+
+    .profiel-gegevens h1 {
+        margin-left: 25px;
+        padding-bottom: 25px;
+    }
+
+    .profiel-online label {
+        font-size: 12px;
+        margin-left: 25px;
+    }
+
+    .profiel-online form input {
+        font-size: 12px;
+        margin-left: 25px;
+
+    }
+
+    .profiel-online h1 {
+        color: #008bff;
+        margin-bottom: 10px;
+        margin-left: 25px;
+    }
+
+    .form-profiel-online div Link {
+        background-color: #ff7e00;
+        /*padding: 7px 13px;*/
+        font-size: 12px;
+        /*margin-right: -90px;*/
+        /*padding-right: 30px;*/
+        margin-right: -19px;
+    }
+
+    .profiel-online-social-media {
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+        width: 90%;
+        /*background-color: red;*/
+        /*margin-left: 30px;*/
+        /*padding-left: 30px;*/
+        /*margin-left: 30px;*/
+    }
+
+    .form-profiel-online div Link:hover {
+        background-color: #d46a02;
+    }
+
+    .form-profiel-online div {
+        padding: 5px;
+    }
+
+    .my-pixam button[type=submit] {
+        top: 1845px;
+    }
+
+}

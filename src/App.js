@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import HomePage from "./Pages/Home";
-import OverOns from "./Pages/OverOns";
-import Contact from "./Pages/Contact";
-import Login from "./Pages/Login";
-import MyPixam from "./Pages/MyPixam";
-import FotoDetails from "./Pages/FotoDetails";
+import HomePage from "./pages/Home/Home";
+import OverOns from "./pages/OverOns/OverOns";
+import Contact from "./pages/Contact/Contact";
+import Login from "./pages/Login/Login";
+import MyPixam from "./pages/MyPixam/MyPixam";
+import FotoDetails from "./pages/FotoDetails/FotoDetails";
 import {
     BrowserRouter as Router,
     Routes,

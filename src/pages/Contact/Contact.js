@@ -1,6 +1,6 @@
 import React from 'react';
-import TopMenu from "../components/TopMenu";
-import Footer from "../components/Footer";
+import TopMenu from "../../components/TopMenu";
+import Footer from "../../components/Footer";
 import './Contact.css';
 import {useForm} from 'react-hook-form';
 
