@@ -1,0 +1,115 @@
+
+/*------------We style the search-bar section ---------->*/
+/*1) Here we create the search-bar*/
+
+.section-searchbar {
+    /*background-color:yellow;*/
+    max-width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #dedcdc;
+}
+
+.container-searchbar {
+    width: 400px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid #dedcdc;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    /*box-shadow: 0 0 10px 5px #f0efef;*/
+}
+
+.form-search {
+    padding-left: 5px;
+    display: flex;
+    gap: 4px;
+}
+
+.form-search input[type=text] {
+    width: 338px;
+    height: 30px;
+    border: 0px solid #dedcdc;
+    font-size: 14px;
+}
+
+.button-search {
+    border-radius: 120px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: #02be6e;
+    border: none;
+}
+
+.button-search:hover {
+    background-color:#028f53;
+}
+
+.form-search ::placeholder {
+    color: #73767e;
+}
+
+/*------------We style the container-main section where we'll put our content---------->*/
+/*1) Here we style the search engine*/
+
+.section-searchbar {
+    display: flex;
+    gap: 20px;
+}
+
+.button-search-2 {
+    width: 100px;
+    height:40px;
+    background-color: #02be6e;
+    color: white;
+    border-radius: 50px;
+    border: 0px solid white;
+}
+
+.button-search-2:hover {
+    background-color: #028f53;
+}
+
+@media screen and (max-width: 576px) {
+
+    .container-searchbar {
+        width: 250px;
+        height: 40px;
+        border-radius: 30px;
+        border: 1px solid #dedcdc;
+        background-color:white;
+        display: flex;
+        align-items: center;
+        /*box-shadow: 0 0 10px 5px #f0efef;*/
+    }
+
+    .form-search input[type=text] {
+        width: 200px;
+        height: 30px;
+        border: 0px solid #dedcdc;
+        font-size: 14px;
+    }
+
+    .button-search {
+        border-radius: 120px;
+        width: 30px;
+        height: 30px;
+        color: white;
+        background-color: #02be6e;
+        border: none;
+    }
+
+    .button-search-2 {
+        width: 90px;
+        height:40px;
+        background-color: #02be6e;
+        color: white;
+        border-radius: 50px;
+        border: 0px solid white;
+    }
+
+}
