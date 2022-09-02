@@ -9,18 +9,18 @@
     display: flex;
     justify-content: center;
     gap: 30px;
+    background-color: yellow;
 }
 
 /*-------we style here the contact form with the className (section-contact-form)-------*/
 
 .section-contact-form {
-    width: 45%;
-    height: 60vh;
+    width: 42%;
+    height: 65%;
     margin-top: 50px;
     background-color: white;
     border-radius: 20px;
     border: 1px solid #dedcdc;
-    /*box-shadow: 0 0 10px #eaebeb;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@
     margin-top: 30px;
 }
 
-.section-contact-form input[type=text], select, textarea {
+.name1 {
     width: 70%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -42,10 +42,11 @@
     margin-bottom: 16px;
     resize: vertical;
     font-family: Poppins;
-    margin-left: 90px;
+    margin-left: 100px;
+    background-color: pink;
 }
 
-.section-contact-form input[type=email], select, textarea {
+.email1 {
     width: 70%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -55,8 +56,60 @@
     margin-bottom: 16px;
     resize: vertical;
     font-family: Poppins;
-    margin-left: 90px;
+    margin-left: 100px;
+    background-color: dodgerblue;
 }
+
+.phone-number1 {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Poppins;
+    margin-left: 100px;
+    background-color: #ff7e00;
+}
+
+.phone-number1::-webkit-inner-spin-button,
+.phone-number1::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.textarea1 {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Poppins;
+    margin-left: 100px;
+    background-color:#9a9a9a;
+}
+
+/*input[type=number]::-webkit-inner-spin-button,*/
+/*input[type=number]::-webkit-outer-spin-button {*/
+/*    -webkit-appearance: none;*/
+/*    -moz-appearance: none;*/
+/*    appearance: none;*/
+/*}*/
+
+.errors-style {
+color: red;
+margin-left: 100px;
+font-size: 12px;
+padding: 5px;
+    width: 70%;
+}
+
 
 .section-contact-form form .schrijven {
     height: 100px;
@@ -71,6 +124,7 @@
     border-radius: 25px;
     cursor: pointer;
     margin-left: 260px;
+    margin-top: 40px;
 }
 
 .section-contact-form button[type=submit]:hover {
@@ -81,7 +135,7 @@
 
 .section-contact-text {
     /*width: 300px;*/
-    height: 60vh;
+    height: 72vh;
     margin-top: 50px;
     background-color: #008bff;
     width: 26%;
@@ -143,7 +197,7 @@
 
     .section-contact-form {
         width: 90%;
-        height: 60vh;
+        height: 65vh;
         margin-top: -100px;
     }
 
@@ -156,11 +210,12 @@
     .section-contact-form input[type=email], select, textarea {
         width: 80%;
         margin-bottom: 16px;
-        margin-left: 50px;
+        margin-left: 90px;
     }
 
     .section-contact-form button[type=submit] {
         margin-left: 360px;
+        margin-top: 10px;
     }
 
     /*------- the contact form (section-contact-text)---*/
@@ -198,18 +253,20 @@
 @media screen and (max-width: 576px) {
     .section-contact {
         width: 100%;
-        height: 140vh;
+        height: 120vh;
         display: flex;
         flex-direction: column;
         align-items: center;
+        /*background-color: red;*/
+        margin-top: 150px;
     }
 
     /*-------the contact form with the className (section-contact-form)-------*/
 
     .section-contact-form {
         width: 90%;
-        height: 60vh;
-        margin-top: -100px;
+        height: 65vh;
+        /*margin-top: -100px;*/
         background-color: white;
         border-radius: 20px;
         border: 1px solid #dedcdc;
@@ -231,19 +288,28 @@
         margin-left: 35px;
     }
 
+    .section-contact-form input[type=number], select, textarea {
+        width: 80%;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        margin-bottom: 16px;
+        margin-left: 35px;
+    }
+
     .section-contact-form button[type=submit] {
         padding: 12px 21px;
         font-weight: bold;
         margin-left: 140px;
+        margin-top: 10px;
     }
 
     /*------- the contact form (section-contact-text)---*/
 
     .section-contact-text {
         width: 90%;
-        height: 50vh;
+        height: 47vh;
         margin-top: 20px;
-        padding-bottom: 20px;
+        /*padding-bottom: 20px;*/
     }
 
     .section-contact-text h {
@@ -269,9 +335,14 @@
         color: white;
         text-decoration: none;
         list-style-type: none;
-        margin-left: 90px;
+        margin-left: 110px;
         margin-top: 20px;
         color: white;
+    }
+
+    .errors-style {
+
+        margin-left: 30px;
     }
 
 }
