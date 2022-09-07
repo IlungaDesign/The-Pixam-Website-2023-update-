@@ -31,7 +31,6 @@ body {
     align-items: center;
     gap: 150px;
     border-bottom: 1px solid #dedcdc;
-    /*background-color: red;*/
 }
 
 /*2) Here we style our logo*/
@@ -48,17 +47,12 @@ body {
     display: flex;
     gap: 20px;
     font-size: 14px;
-    /*background-color: lightpink;*/
 }
 
 /*4) Here we style the button of the menu of the nav*/
 
-.container-nav ul li link{
-    text-decoration: none;
+.hover-menu {
     color: black;
-    font-family: Poppins;
-    font-size: 14px;
-    /*background-color: lightskyblue;*/
 }
 
 .hover-menu:hover {
@@ -81,7 +75,6 @@ body {
     gap: 10px;
     color: #02be6e;
     font-size: 14px;
-    /*background-color: greenyellow;*/
 }
 
 .checkbtn {
@@ -96,13 +89,26 @@ body {
     display: none;
 }
 
+.container-nav2 {
+    display:none;
+}
+
+.mypixam-link {
+    color: #02be6e;
+    text-decoration: none;
+}
+
+.mypixam-link:hover {
+    color: #028f53;
+    text-decoration: none;
+}
+
 /*!*----------We style the nav for the tablet version *!------------*/
 
 @media screen and (max-width: 992px) {
     .hover-mypixam h{
         display: none;
     }
-
     .container-nav {
         gap: 30px;
     }
@@ -111,66 +117,12 @@ body {
 /*!*----------We style the nav for the smartphone version *!------------*/
 
 @media screen and (max-width: 576px) {
-
-    .container-nav {
-        /*display: flex;*/
-        /*justify-content: space-around;*/
-        /*align-items: center;*/
-        /*gap: 100px;*/
-    }
-
-    .container-nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-        position: fixed;
-        width: 100%;
-        height: 36vh;
-        background: #effdf7;
-        top: 90px;
-        left: -100%;
-        transition: all .5s;
-        /*border-bottom: 1px solid #02be6e;*/
-        /*border-top: 1px solid #02be6e;*/
-    }
-
-
-    .container-nav ul li {
-        margin-top: 30px;
-        margin-left: 30px;
-    }
-
-    #link-my-pixam {
-        display: block;
-    }
-
-    .logo-pixam {
-        width:100px;
-        height:60px;
-    }
-
-    .container-my-Pixam {
+    .app-header {
         display: none;
+        z-index: -1;
     }
-
-    .checkbtn {
-        display: block;
-        font-size: 30px;
-        color: #02be6e;
-        line-height: 80px;
-        cursor: pointer;
-        margin-left: 150px;
-    }
-    #check {
-        display: none;
-    }
-
-    #check:checked ~ ul{
-        left: 0;
-    }
-
 }
 
 
-/*-------------------------------------------*/
+/*!*-------------------------------------------*!*/
 

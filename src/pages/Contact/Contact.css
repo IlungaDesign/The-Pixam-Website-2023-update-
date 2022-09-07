@@ -107,7 +107,8 @@ color: red;
 margin-left: 100px;
 font-size: 12px;
 padding: 5px;
-    width: 70%;
+width: 70%;
+    border: 1px solid red;
 }
 
 

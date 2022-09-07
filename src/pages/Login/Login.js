@@ -3,98 +3,206 @@ import TopMenu from "../../components/TopMenu";
 import Footer from "../../components/Footer";
 import './Login.css';
 import {Link} from "react-router-dom";
+import TopMenu2 from "../../components/TopMenu2";
+import {useForm} from 'react-hook-form';
 
 
 function Login () {
+
+    const { register, handleSubmit, formState:{errors} } = useForm();
+
+    function onFormSubmit(data) {
+        console.log(data);
+    }
+
+    console.log('Errors', errors);
+
     return (
 
         <>
             <TopMenu/>
+            <TopMenu2/>
+
 
             <section className="section-login">
 
-                <form action="#" className="left-form">
-                    <div>
+                <form action="#"
+                      className="left-form"
+                      onSubmit={handleSubmit(onFormSubmit)}>
+
                         <h1>Inloggen</h1>
-                        <h>Login als je je een account hebt</h><br/>
+                        <h>Login als je je een account hebt</h>
 
-                        <Link to="/my-pixam" ><i className="fa-brands fa-facebook "></i>
+                        <a href="/my-pixam" className="facebook-button-registration">
+                            <i className="fa-brands fa-facebook "></i>
                             Ga verder met facebook
-                        </Link>
+                        </a>
 
-                        <Link to="/my-pixam" ><i class="fa-brands fa-google"></i>
+                        <a href="/my-pixam" className="google-button-registration">
+                            <i className="fa-brands fa-google"></i>
                             Ga verder met Google
-                        </Link><br/>
+                        </a>
 
-                        <input type="text"
-                               placeholder="Jouw naam.."
-                               className="jouw-naam-login"
-                               id="j-naam-login"
-                               name="name-login"/>
+                        <input
+                        {...register('emailLogin', {
+                        required: 'Email is verplicht',
+                        pattern: {
+                            value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                            message: 'Je moet een geldige email invoeren',
+                        },
+                        })}
+                        type="email"
+                        placeholder="Jouw email.."
+                        id="j-email2"
+                        className="email-login-page"
+                        />
 
-                        <input type="text"
-                               placeholder="E-mail adres.."
-                               id="j-email2"
-                               className="jouw-email2"
-                               name="email-login"/><br/>
+                        {errors.emailLogin && <p className="errors-message-login-page">{errors.emailLogin.message}</p>}
 
-                        <button type="submit"
-                                value="login">Inloggen</button>
+                    {/*---------------------------------------------------*/}
 
-                    </div>
+                        <input type="password"
+                           placeholder="Jouw wachtwoord.."
+                           id="j-email2"
+                           className="password-login-page"
+                           name="password-login-page"
+
+                    {...register("password", {
+                        required: "Wachtwoord is verplicht",
+                        pattern: {
+                            value: /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])./,
+                            message: "Wachtwoord moet tenminste 1 nummer, " +
+                                "1 letter and 1 speciaal karakter"
+                        },
+                        minLength: {
+                            value: 5,
+                            message: "Naam moet minimaal 5 karakters bevatten"
+                        },
+                    })}
+                    />
+
+                    {errors.password && <p className="errors-message-login-page">
+                        {errors.password.message}</p>}
+
+                    {/*---------------------------------------*/}
+
+                    <button type="submit"
+                                value="login"
+                                className="button-login-left-form"
+                        >
+                            Inloggen
+                        </button>
+
+                    {/*--------------------------------------*/}
 
                 </form>
 
 
                 <form action="#" className="right-form">
-                    <div>
                         <h1>Registreren</h1>
                         <h>Schijf in als je nog geen account hebt</h>
-                        <br/>
 
-                        <Link to="/my-pixam"><i className="fa-brands fa-facebook "></i>
+                        <a href="/my-pixam" className="facebook-button-registration"><i className="fa-brands fa-facebook "></i>
                             Ga verder met facebook
-                        </Link>
+                        </a>
 
-                        <Link to="/my-pixam"><i className="fa-brands fa-google"></i>
+                        <a href="/my-pixam" className="google-button-registration"><i className="fa-brands fa-google"></i>
                             Ga verder met Google
-                        </Link><br/>
+                        </a>
 
                         <input type="text"
                                placeholder="Jouw naam.."
-                               className="jouw-naam-login"
+                               className="name-login2-page"
                                id="j-naam-login"
-                               name="name-login"/>
 
-                        <input type="text"
-                               placeholder="E-mail adres.."
-                               id="j-email2"
-                               className="jouw-email2"
-                               name="email-login"/>
+                    {...register("nameLogin", {
+                        required: "Naam is verplicht",
+                    })}
+                    />
+
+                    {errors.nameLogin && <p className="errors-message-login-page">
+                        {errors.nameLogin.message}</p>}
+
+                    {/*----------------------------------------*/}
+
+
+                    <input type="email"
+                           placeholder="Jouw email.."
+                           id="j-email2"
+                           className="email-login2-page"
+                    {...register('emailLogin2', {
+                        required: 'Email is verplicht',
+                        pattern: {
+                            value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                            message: 'Je moet een geldige email invoeren',
+                        },
+                    })}
+                    />
+
+                    {errors.emailLogin2 && <p className="errors-message-login-page">
+                        {errors.emailLogin2.message}</p>}
+
+                    {/*--------------------------------------*/}
+
 
                         <input type="password"
-                               placeholder="Je wachtwoord..."
-                               name="psw"
-                               id="psw" required/>
+                           placeholder="Jouw wachtwoord.."
+                           id="j-email2"
+                           className="password-login2-page"
 
-                        <p>Minimaal 8 tekens (verplicht)<br/>
+                    {...register("password2", {
+                        required: "Wachtwoord is verplicht",
+                        pattern: {
+                            value: /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])./,
+                            message: "Wachtwoord moet tenminste 1 nummer, 1 letter and 1 speciaal karakter"
+                        },
+                        minLength: {
+                            value: 5,
+                            message: "Naam moet minimaal 5 karakters bevatten"
+                        },
+                    })}
+                    />
+
+                    {errors.password2 && <p className="errors-message-login-page">
+                        {errors.password2.message}</p>}
+
+                    {/*--------------------------------------*/}
+
+                        <p className="text-checkbox-register-page">
+                            Minimaal 8 tekens (verplicht)<br/>
                             Voeg een nummer toe (verplicht)<br/>
                             Minimaal één hoofdletter<br/>
-                            Voeg een symbool toe</p>
+                            Voeg een symbool toe
+                        </p>
 
-                        <input className="terms-and-conditions"
+                    {/*--------------------------------------*/}
+
+                        <div className="check-box-items">
+                               <input type="checkbox"
+                               className="checkbox-register-page"
                                id="terms-and-conditions"
-                               type="checkbox"
                                value="check"
-                               name="checkbox"/><br/>
 
-                        <label>Ik ga mee akkoord met de algemene<br/> voorwaarden</label>
+                            {...register("checkboxRegister", {
+                                required: "Je moet akkoord gaan met de voorwaarden",
+                            })}
+                            />
+
+                            <label>Ik ga mee akkoord met de algemene
+                                   <br/>voorwaarden
+                               </label>
+
+                        </div>
+
+                    {errors.checkboxRegister && <p className="errors-message-login-page2">{errors.checkboxRegister.message}</p>}
+
+
+                    {/*--------------------------------------*/}
 
                         <button type="submit"
+                                className="button-register-right-form"
                                 value="login">Registreren
                         </button>
-
-                    </div>
 
                 </form>
 

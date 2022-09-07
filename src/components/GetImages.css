@@ -1,0 +1,30 @@
+.flex {
+    background-color: red;
+}
+
+.section-image-getImages {
+    background-color: red;
+}
+
+.items-images-getImages {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.images-details1 {
+    /*color: #ff7e00;*/
+    background-color: red;
+    /*margin: 20px;*/
+}
+
+.images-details1 img {
+    padding: 15px;
+    /*height: 400px;*/
+    width: 442px;
+    object-fit: scale-down;
+    color: red;
+}
+
+.profile-details {
+    border-radius: 50px;
+}

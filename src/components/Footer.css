@@ -82,3 +82,9 @@
     color: #73767e;
     font-size: 10px;
 }
+
+.container-footer .errors-message-footer-page2 {
+    color: red;
+    font-size: 12px;
+    /*background-color: red;*/
+}

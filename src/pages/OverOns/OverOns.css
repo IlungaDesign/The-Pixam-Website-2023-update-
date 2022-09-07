@@ -7,8 +7,6 @@
 /*---------we style here the section-baner----------------*/
 
 .section-baner{
-    /*padding: 0;*/
-    /*margin: 0;*/
     box-sizing: border-box;
     background-image: url("../../images/designer2.png");
     max-width: 100%;
@@ -17,7 +15,6 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    /*align-items: center;*/
     gap: 50px;
 }
 
@@ -28,25 +25,25 @@
     padding-left: 100px;
 }
 
-.section-baner button {
-    border-radius: 120px;
-    background: transparent;
-    color: #02be6e;
-    height: 80px;
-    width: 350px;
-    border: 3px solid #02be6e;
-    margin-left: 200px;
-}
-
-.section-baner button:hover {
-    background-color: #02be6e;
-}
-
-.section-baner button a{
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
+.probeer-button {
     color: white;
+    width: 350px;
+    height: 80px;
+    font-size: 25px;
+    font-weight: bolder;
+    border-radius: 120px;
+    /*background-color: #02be6e;*/
+    border: 3px solid #02be6e;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 160px;
+}
+
+.probeer-button:hover {
+    background-color: #02be6e;
     transition-duration: 0.2s;
 }
 
@@ -274,7 +271,7 @@
 
 .creating-value div h2 {
     font-weight: lighter;
-    font-size:40px;
+    font-size:39px;
     margin-left: 100px;
     margin-right: 100px;
 }
@@ -294,6 +291,7 @@
 
     .section-baner {
         height: 40vh;
+        margin-top: 90px;
     }
 
     .section-baner h1{
@@ -303,15 +301,12 @@
         text-align: center;
     }
 
-    .section-baner button {
-        height: 50px;
-        width: 200px;
-        margin-left: 100px;
-        margin-top: -10px;
-    }
 
-    .section-baner button a{
-        font-size: 18px;
+    .probeer-button {
+        width: 200px;
+        height: 50px;
+        font-size: 15px;
+        margin-left: 95px;
     }
 
     /*---------------------------*/
@@ -424,7 +419,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 105vh;
+        height: 113vh;
 
     }
     .section-value-icons div img {
@@ -446,14 +441,12 @@
     /*---------------------------------*/
 
     .section-our-team {
-        /*background-color: #eef8f4;*/
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 200px;
-        height: 105vh;
+        height: 110vh;
         width: 100%;
-        /*background-color: #008bff;*/
     }
 
     .section-our-team h {

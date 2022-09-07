@@ -13,18 +13,14 @@ const navLinkStyles = ( {isActive} ) => {
 
 function TopMenu () {
     return (
-
-        <header className="App-header">
+        <header className="app-header">
             <nav>
                 <div className="container-nav">
                     <NavLink to="/"><img src={logo} alt="logo-pixam" className="logo-pixam"/></NavLink>
 
-                    <input type='checkbox' id='check'/>
-                    <label for='check' className='checkbtn'><i className="fa-solid fa-bars"></i></label>
-
                     <ul >
                         <li>
-                            <NavLink style={navLinkStyles}  to="/" exact className="hover-menu">Afbeeldingen</NavLink>
+                            <NavLink style={navLinkStyles}  to="/" exact className="hover-menu" >Afbeeldingen</NavLink>
                         </li>
 
                         <li>
@@ -44,13 +40,16 @@ function TopMenu () {
                         </li>
                     </ul>
 
-
                     <div className="container-my-Pixam">
                         <Link to="/my-pixam" className="hover-mypixam" ><i className="fa-solid fa-user fa-2x"></i></Link>
 
-                        <Link to="/my-pixam" className="hover-mypixam"><h>My Pixam</h></Link>
+                        <Link to="/my-pixam" className="mypixam-link"><h>My Pixam</h></Link>
                     </div>
+
+                    {/*--------------we create here the menu for the small icon-------------------------------------------*/}
+
                 </div>
+
             </nav>
         </header>
 
@@ -58,3 +57,4 @@ function TopMenu () {
 }
 
 export default TopMenu;
+
