@@ -1,0 +1,111 @@
+
+.section-foto-Details {
+    /*background-color: red;*/
+    width: 1300px;
+    height: 670px;
+    display: flex;
+    justify-content: space-around;
+    /*border: 1px solid #b4b4b4;*/
+    margin-top: 20px;
+    /*gap: 20px;*/
+}
+
+.blabla3 {
+    width: auto;
+    height: 100%;
+    /*margin-top: 20px;*/
+    /*margin-bottom: 20px;*/
+    margin: 20px;
+    padding: 20px;
+}
+
+.section-information-foto-details {
+    /*background-color: #ff7e00;*/
+    width: 350px;
+    height:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:60px;
+    margin-top: 20px;
+}
+
+.section-insta-name {
+    /*background-color: yellow;*/
+    width: 290px;
+    height:100px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.section-foto-details-worker3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.text-information {
+    font-size: 14px;
+}
+.insta-text {
+    color: #9a9a9a;
+}
+
+.button-download-fotodetails {
+    width: 200px;
+    height:45px;
+    background-color: #02be6e;
+    color: white;
+    border-radius: 50px;
+    border: 0px solid white;
+    font-weight: bold;
+}
+
+.button-download-fotodetails:hover {
+    background-color: #028f53;
+
+}
+
+@media screen and (max-width: 999px) {
+    .section-foto-Details {
+        /*background-color: red;*/
+        width: 1300px;
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*border: 1px solid #b4b4b4;*/
+        /*margin-top: 20px;*/
+        gap: 0px;
+        z-index: -3;
+    }
+
+    .blabla3 {
+        width: 80%;
+        height: auto;
+        margin-top: 170px;
+        z-index: -3;
+    }
+
+    .section-information-foto-details {
+        /*background-color: #ff7e00;*/
+        width: 350px;
+        height:300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:30px;
+        margin-top: 0px;
+    }
+
+    .section-insta-name {
+        /*background-color: yellow;*/
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+}
+

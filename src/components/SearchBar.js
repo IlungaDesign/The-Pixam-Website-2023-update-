@@ -1,8 +1,19 @@
 import React from 'react';
 import './SearchBar.css';
-// import logo from '../assets/pixam_logo9.png';
+import axios from 'axios'
+import {get} from "react-hook-form";
 
 function SearchBar () {
+
+    async function getData(){
+        try{
+            const result = await axios.get('https://api.unsplash.com/search/photos?page=1&query=office&client_id=3sZuQtQVCljncB-BTL7BmeRQGDybQmsP28B4dOybwko')
+            console.log(result.data.results)
+        }catch (e) {
+
+        }
+    }
+    getData()
     return (
         <section className="section-searchbar">
             <div className="container-searchbar">

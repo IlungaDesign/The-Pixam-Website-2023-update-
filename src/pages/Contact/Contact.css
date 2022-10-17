@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    background-color: yellow;
+    /*background-color: yellow;*/
 }
 
 /*-------we style here the contact form with the className (section-contact-form)-------*/
@@ -43,7 +43,7 @@
     resize: vertical;
     font-family: Poppins;
     margin-left: 100px;
-    background-color: pink;
+    /*background-color: pink;*/
 }
 
 .email1 {
@@ -57,7 +57,7 @@
     resize: vertical;
     font-family: Poppins;
     margin-left: 100px;
-    background-color: dodgerblue;
+    /*background-color: dodgerblue;*/
 }
 
 .phone-number1 {
@@ -71,7 +71,7 @@
     resize: vertical;
     font-family: Poppins;
     margin-left: 100px;
-    background-color: #ff7e00;
+    /*background-color: #ff7e00;*/
 }
 
 .phone-number1::-webkit-inner-spin-button,
@@ -92,7 +92,7 @@
     resize: vertical;
     font-family: Poppins;
     margin-left: 100px;
-    background-color:#9a9a9a;
+    /*background-color:#9a9a9a;*/
 }
 
 /*input[type=number]::-webkit-inner-spin-button,*/

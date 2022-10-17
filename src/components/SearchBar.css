@@ -46,6 +46,7 @@
     color: white;
     background-color: #02be6e;
     border: none;
+    font-weight: bold;
 }
 
 .button-search:hover {
@@ -71,6 +72,7 @@
     color: white;
     border-radius: 50px;
     border: 0px solid white;
+    font-weight: bold;
 }
 
 .button-search-2:hover {
@@ -120,6 +122,7 @@
         color: white;
         background-color: #02be6e;
         border: none;
+        font-weight: bold;
     }
 
     .button-search-2 {
@@ -129,6 +132,7 @@
         color: white;
         border-radius: 50px;
         border: 0px solid white;
+        font-weight: bold;
     }
 
 }

@@ -5,11 +5,9 @@
 
 .my-pixam {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    /*background-color: yellow;*/
+    justify-content: center;
     width: 100%;
-    height: 130vh;
+    height: 100vh;
     margin-top: 20px;
 
 }
@@ -18,104 +16,22 @@
 and profiel-online*/
 
 .section-register {
-    /*background-color: #c0dffb;*/
-    width: 90%;
-    height: 115vh;
+    width: 45%;
+    height: 75vh;
     display: flex;
     gap: 0px;
     justify-content: center;
-    /*align-items: center;*/
-    margin-top: 15px;
     border-radius: 20px;
+    margin-top: 50px;
     border: 1px solid #d7d5d5;
+    /*background-color: #ff7e00;*/
 }
 
-.profiel-gegevens {
-    /*background-color: violet;*/
-    height: 70vh;
-    width: 35%;
+
+.form-profiel-online {
     margin-top: 20px;
-    margin-left: 190px;
-    /*border-right: 1px solid #9a9a9a;*/
 }
 
-.profiel-online {
-    /*background-color: red;*/
-    height: 90vh;
-    width: 50%;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-
-.profiel-gegevens div {
-    margin-bottom: 10px;
-}
-
-.profiel-gegevens label {
-    display: inline-block;
-    width: 150px;
-    text-align: left;
-    font-size: 14px;
-}
-
-.profiel-gegevens #gender {
-    display: inline-block;
-    width: 100px;
-    height: 40px;
-    text-align: left;
-    margin-left: 10px;
-    /*background-color: red;*/
-    border-radius: 20px;
-    padding: 10px;
-    border: 1px solid #d7d5d5;
-}
-
-.profiel-gegevens form input {
-    padding: 5px;
-    font-size: 13px;
-    font-family: Poppins;
-    width: 300px;
-    height: 35px;
-    border-radius: 20px;
-    border: 1px solid #d7d5d5;
-    color: #9a9a9a;
-    margin: 8px;
-    padding: 20px;
-}
-
-.profiel-gegevens form div #myFile {
-    background-image: url("../../images/icon_picture_upload5.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 0px solid #d7d5d5;
-    width: 120px;
-    height: 120px;
-    border-radius: 20px;
-    margin-left: 10px;
-    z-index: 2;
-    /*background-color: darkviolet;*/
-    background-color: transparent;
-    color: transparent;
-}
-
-
-.profiel-gegevens form div img {
-    width: 120px;
-    height: 120px;
-    position: absolute;
-
-}
-
-.profiel-gegevens h1 {
-    color: #008bff;
-    margin-bottom: 10px;
-}
-
-.upload-image-button {
-    background-color: #ff7e00;
-    border-radius: 40px;
-    color: #02be6e;
-}
 
 /*-----------we style the div (profiel-online)--------*/
 
@@ -140,13 +56,14 @@ and profiel-online*/
     border: 1px solid #d7d5d5;
     color: #9a9a9a;
     margin: 8px;
-    padding: 20px;
-
 }
 
 .profiel-online h1 {
     color: #008bff;
     margin-bottom: 10px;
+    font-size: 22px;
+    margin-left: 120px;
+    margin-top: 30px;
 }
 
 .facebook-button-mypixam {
@@ -202,7 +119,7 @@ and profiel-online*/
     cursor: pointer;
     width: 300px;
     position: absolute;
-    top: 1000px;
+    top: 630px;
 }
 
 .my-pixam button[type=submit]:hover {
@@ -215,25 +132,17 @@ and profiel-online*/
 
     .my-pixam {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 100%;
-        height: 180vh;
+        height: 100vh;
         margin-top: 20px;
     }
+
     .section-register {
         width: 90%;
-        height: 175vh;
+        height: 75vh;
         display: flex;
         flex-direction: column;
-        align-items: center;
         padding-bottom: 100px;
-    }
-
-    .profiel-gegevens {
-        height: 70vh;
-        width: 90%;
-        margin-left: 30px;
     }
 
     .profiel-online {
@@ -259,7 +168,7 @@ and profiel-online*/
     .my-pixam button[type=submit] {
         display: block;
         position: absolute;
-        top: 1480px;
+        top: 650px;
     }
 }
 
@@ -267,50 +176,22 @@ and profiel-online*/
 
 @media screen and (max-width: 576px) {
     .my-pixam {
-        height: 239vh;
+        height: 90vh;
         margin-top: 110px;
-        /*background-color: red;*/
     }
 
     .section-register {
         width: 90%;
-        height: 232vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding-top: 0px;
-    }
-
-    .profiel-gegevens {
-        height: 90vh;
-        width: 100%;
-        margin-left: 0px;
+        padding-bottom: 100px;
     }
 
     .profiel-online {
-        height: 120vh;
+        height: 100vh;
         width: 100%;
         margin-left: 0px;
-    }
-
-    .profiel-gegevens label {
-        font-size: 12px;
-        margin-left: 25px;
-    }
-
-    .profiel-gegevens #gender {
-        height: 42px;
-        margin-left: 0px;
-    }
-
-    .profiel-gegevens form input {
-        font-size: 12px;
-        margin-left: 25px;
-    }
-
-    .profiel-gegevens h1 {
-        margin-left: 25px;
-        padding-bottom: 25px;
     }
 
     .profiel-online label {
@@ -321,7 +202,6 @@ and profiel-online*/
     .profiel-online form input {
         font-size: 12px;
         margin-left: 25px;
-
     }
 
     .profiel-online h1 {
@@ -331,23 +211,12 @@ and profiel-online*/
     }
 
     .form-profiel-online div Link {
-        background-color: #ff7e00;
-        /*padding: 7px 13px;*/
         font-size: 12px;
-        /*margin-right: -90px;*/
-        /*padding-right: 30px;*/
         margin-right: -19px;
     }
 
     .profiel-online-social-media {
-        /*display: flex;*/
-        /*justify-content: center;*/
-        /*align-items: center;*/
         width: 90%;
-        /*background-color: red;*/
-        /*margin-left: 30px;*/
-        /*padding-left: 30px;*/
-        /*margin-left: 30px;*/
     }
 
     .form-profiel-online div Link:hover {
@@ -359,7 +228,7 @@ and profiel-online*/
     }
 
     .my-pixam button[type=submit] {
-        top: 1970px;
+        top: 700px;
     }
 
 }

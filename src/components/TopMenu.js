@@ -1,7 +1,9 @@
-import React from 'react';
+// import React, {useContext} from 'react';
 import logo from '../assets/pixam_logo9.png';
 import {Link, NavLink} from 'react-router-dom';
 import './TopMenu.css';
+// import { AuthContext } from '../context/AuthContext';
+// import {useHistory} from "react-router-dom";
 
 const navLinkStyles = ( {isActive} ) => {
     return {
@@ -12,6 +14,9 @@ const navLinkStyles = ( {isActive} ) => {
 }
 
 function TopMenu () {
+    // const {logout, isAuth} = useContext()
+    // const history = useHistory();
+
     return (
         <header className="app-header">
             <nav>
@@ -20,20 +25,20 @@ function TopMenu () {
 
                     <ul >
                         <li>
-                            <NavLink style={navLinkStyles}  to="/" exact className="hover-menu" >Afbeeldingen</NavLink>
+                            <NavLink style={navLinkStyles}  to="/home-page" exact className="hover-menu" >Afbeeldingen</NavLink>
                         </li>
 
-                        <li>
-                            <NavLink style={navLinkStyles} to="/over-ons" className="hover-menu"> Over ons</NavLink>
-                        </li>
+                        {/*<li>*/}
+                        {/*    <NavLink style={navLinkStyles} to="/over-ons" className="hover-menu"> Over ons</NavLink>*/}
+                        {/*</li>*/}
 
-                        <li>
-                            <NavLink style={navLinkStyles} to="/contact" className="hover-menu">Contact</NavLink>
-                        </li>
+                        {/*<li>*/}
+                        {/*    <NavLink style={navLinkStyles} to="/contact" className="hover-menu">Contact</NavLink>*/}
+                        {/*</li>*/}
 
-                        <li>
-                            <NavLink style={navLinkStyles} to="/login" className="hover-menu">Login</NavLink>
-                        </li>
+                        {/*<li>*/}
+                        {/*    <NavLink style={navLinkStyles} to="/login" className="hover-menu">Uitloggen</NavLink>*/}
+                        {/*</li>*/}
 
                         <li>
                             <NavLink style={navLinkStyles} to="/login" className="hover-menu" id='link-my-pixam'>My Pixam</NavLink>
@@ -47,6 +52,25 @@ function TopMenu () {
                     </div>
 
                     {/*--------------we create here the menu for the small icon-------------------------------------------*/}
+
+                    {/*{isAuth ?*/}
+                        <button
+                            type="button"
+                            // onClick={logout}
+                        >
+                            Uitloggen
+                        </button>
+                        :
+                        <div>
+                            <button
+                                type="button"
+                                // onClick={() => history.push('/login')}
+                            >
+                                Inloggen
+                            </button>
+
+                        </div>
+                    {/*}*/}
 
                 </div>
 

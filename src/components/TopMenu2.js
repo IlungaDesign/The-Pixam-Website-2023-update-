@@ -16,19 +16,21 @@ function TopMenu2 () {
 
                     <ul >
                         <li>
-                            <NavLink  to="/" exact className="hover-menu">Afbeeldingen</NavLink>
+                            <NavLink  to="/home-page" exact className="hover-menu">Afbeeldingen</NavLink>
                         </li>
 
-                        <li>
-                            <NavLink  to="/over-ons" className="hover-menu"> Over ons</NavLink>
-                        </li>
+
+
+                        {/*<li>*/}
+                        {/*    <NavLink  to="/over-ons" className="hover-menu"> Over ons</NavLink>*/}
+                        {/*</li>*/}
+
+                        {/*<li>*/}
+                        {/*    <NavLink to="/contact" className="hover-menu">Contact</NavLink>*/}
+                        {/*</li>*/}
 
                         <li>
-                            <NavLink to="/contact" className="hover-menu">Contact</NavLink>
-                        </li>
-
-                        <li>
-                            <NavLink  to="/login" className="hover-menu">Login</NavLink>
+                            <NavLink  to="/login" className="hover-menu">Uitloggen</NavLink>
                         </li>
 
                         <li>

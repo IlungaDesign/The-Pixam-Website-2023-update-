@@ -1,34 +1,48 @@
 import React from 'react';
-import TopMenu from "../../components/TopMenu";
-import TopMenu2 from "../../components/TopMenu2";
-import Footer from "../../components/Footer";
-import './OverOns.css';
-import {Link} from 'react-router-dom';
-import fotoOurHistory from "../../images/employer.png"
-import iconExcellence from "../../images/image_excellence.png"
-import iconCollaboration from "../../images/image_collaboration3.png"
-import iconResponsability from "../../images/image_responsability2.png"
-import iconTransparency from "../../images/image_transparency2.png"
-import worker1 from "../../images/worker1.png"
-import worker2 from "../../images/worker2.png"
-import worker3 from "../../images/worker3.png"
-import valuePicture from "../../images/findfitness_foto3.png"
+import logo from '../assets/pixam_logo9.png';
+// import TopMenu from "../components/TopMenu";
+// import TopMenu2 from "../components/TopMenu2";
+import Footer from "../components/Footer";
+import './StartPage.css';
+import {Link, NavLink} from 'react-router-dom';
+import fotoOurHistory from "../images/employer.png"
+import iconExcellence from "../images/image_excellence.png"
+import iconCollaboration from "../images/image_collaboration3.png"
+import iconResponsability from "../images/image_responsability2.png"
+import iconTransparency from "../images/image_transparency2.png"
+import worker1 from "../images/worker1.png"
+import worker2 from "../images/worker2.png"
+import worker3 from "../images/worker3.png"
+import valuePicture from "../images/findfitness_foto3.png"
 
 
-function OverOns () {
+function StartPage () {
     return (
         <>
-            <TopMenu/>
-            <TopMenu2/>
+
+            <nav className="navbar-start-page">
+                <NavLink to="/"><img src={logo} alt="logo-pixam" className="logo-pixam"/></NavLink>
+                <ul className="login-register-button">
+                    <li>
+                        <NavLink  to="/login" exact className="hover-menu2" >Inloggen</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/register" className="hover-menu2"> Registreren</NavLink>
+                    </li>
+
+                </ul>
+
+            </nav>
 
             <section className="section-baner">
                 <h1>Pixam biedt u de mogelijkheid <br/>
                     om gratis afbeeldingen naar <br/>
                     keuze te downloaden</h1>
 
-                    <Link to="/" className ="probeer-button">
-                    Registreren hier
-                    </Link>
+                <Link to="/" className ="probeer-button">
+                    Zoek een afbeelding
+                </Link>
 
             </section>
 
@@ -179,4 +193,4 @@ function OverOns () {
     );
 }
 
-export default OverOns;
+export default StartPage;

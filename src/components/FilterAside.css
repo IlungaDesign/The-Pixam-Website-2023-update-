@@ -1,6 +1,6 @@
-/*------We create the section main part here*/
-/*1) We style a main section to place the filter and the content horizontally*/
-/*using display flex'*/
+/*!*------We create the section main part here*!*/
+/*!*1) We style a main section to place the filter and the content horizontally*!*/
+/*!*using display flex'*!*/
 
 .container-main {
     /*background-color: pink;*/
@@ -10,7 +10,7 @@
     gap: 20px;
 }
 
-/*2) here I style a container-filter where I will build my filter */
+/*!*2) here I style a container-filter where I will build my filter *!*/
 
 .container-filter {
     width: 15vw;
@@ -18,7 +18,9 @@
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
-    border-bottom: 0px solid #dedcdc;
+    /*border-bottom: 1px solid #dedcdc;*/
+    /*border: 1px solid #b4b4b4;*/
+
 
 }
 
@@ -52,7 +54,7 @@
 /*    font-size: 14px;*/
 /*}*/
 
-/*3) We style here the icon and the texts of the aside filter*/
+/*!*3) We style here the icon and the texts of the aside filter*!*/
 
 .icon-filter {
     color: #02be6e;
@@ -71,15 +73,16 @@
     color: #02be6e;
 }
 
-/*2) here I style a container-filter where I will build my filter */
+/*!*2) here I style a container-filter where I will build my filter *!*/
 
 .container-filter {
     width: 15vw;
-    height: 80vh;
+    height: 682px;
     margin-top: 20px;
     margin-left: 20px;
     border:1px solid #dedcdc;
     border-bottom:0px solid #dedcdc;
+    /*background-color: #ff7e00;*/
 }
 
 .container-filter table {
@@ -88,21 +91,21 @@
 
 }
 
-/*3) We style here the icon and the texts of the aside filter*/
+/*!*3) We style here the icon and the texts of the aside filter*!*/
 
-.icon-filter {
-    color: #02be6e;
-    font-size: 10px;
-    padding: 10px;
-}
+/*.icon-filter {*/
+/*    color: #02be6e;*/
+/*    font-size: 10px;*/
+/*    padding: 10px;*/
+/*}*/
 
-.icon-filter:hover {
-    color: #028f53;
-}
+/*.icon-filter:hover {*/
+/*    color: #028f53;*/
+/*}*/
 
-.btn-hover-filter:hover {
-    color: #02be6e;
-}
+/*.btn-hover-filter:hover {*/
+/*    color: #02be6e;*/
+/*}*/
 
 @media screen and (max-width: 1320px) {
    .container-filter {
@@ -119,6 +122,7 @@
     .container-filter {
         width: 23vw;
         height: 80vh;
+        display: none;
     }
     .container-filter table {
         width: 23vw;
@@ -131,6 +135,7 @@
         width: 30vw;
         height: 80vh;
         border-bottom: 0px solid #dedcdc;
+        display: none;
     }
     .container-filter table {
         width: 30vw;
@@ -143,6 +148,7 @@
         width: 37vw;
         height: 80vh;
         border-bottom: 0px solid #dedcdc;
+        display: none;
     }
     .container-filter table {
         width: 37vw;
@@ -164,6 +170,7 @@
         margin-bottom: 20px;
         border-bottom: 0px solid #dedcdc;
         z-index: -3;
+        display: none;
     }
 
     .container-filter table, th {

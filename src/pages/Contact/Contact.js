@@ -59,7 +59,7 @@ function Contact () {
                             className="email1"
                         />
 
-                        {errors.email &&<p className="errors-style">{errors. email.message}</p>}
+                        {errors.email&&<p className="errors-style">{errors.email.message}</p>}
 
                         {/*--------------*/}
 
@@ -131,11 +131,11 @@ function Contact () {
 
 
                     <ul className="icons-social-contact">
-                        <li><a href="#"><i className="fa-brands fa-youtube fa-1x"></i></a></li>
-                        <li><a href="#"><i className="fa-brands fa-facebook fa-1x"></i></a></li>
-                        <li><a href="#"><i className="fa-brands fa-twitter fa-1x"></i></a></li>
-                        <li><a href="#"><i className="fa-brands fa-instagram-square fa-1x"></i></a></li>
-                        <li><a href="#"><i className="fa-brands fa-snapchat-square fa-1x"></i></a></li>
+                        <li><a href="https://www.youtube.com"><i className="fa-brands fa-youtube fa-1x"></i></a></li>
+                        <li><a href="https://www.facebook.com"><i className="fa-brands fa-facebook fa-1x"></i></a></li>
+                        <li><a href="https://twitter.com"><i className="fa-brands fa-twitter fa-1x"></i></a></li>
+                        <li><a href="https://www.instagram.com"><i className="fa-brands fa-instagram-square fa-1x"></i></a></li>
+                        <li><a href="https://accounts.snapchat.com"><i className="fa-brands fa-snapchat-square fa-1x"></i></a></li>
                     </ul>
                 </div>
 
