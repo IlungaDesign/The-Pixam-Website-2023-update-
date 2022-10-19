@@ -1,8 +1,14 @@
 import React from 'react';
 import './FilterAside.css';
 import {Link} from "react-router-dom";
+import {set} from "react-hook-form";
 
-function FilterAside () {
+function FilterAside ({query, setQuery}) {
+
+    function click() {
+        setQuery('music')
+    }
+
     return (
         <div className="container-filter">
             <table>
@@ -12,12 +18,28 @@ function FilterAside () {
 
                 <tr>
                     <td>
-                        <Link to="/" className="icon-filter" >
+                        <Link to="#" className="icon-filter" >
+                            <i className="fa-solid fa-music fa-2x"></i>
+                        </Link>
+                    </td>
+                    <td>
+                        <button
+                            type='button'
+                            onClick={click}
+                            className="btn-hover-filter" >
+                            Muziek
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <Link to="#" className="icon-filter" >
                             <i className="fa-solid fa-business-time fa-2x"></i>
                         </Link>
                     </td>
                     <td>
-                        <Link to="/" className="btn-hover-filter" >
+                        <Link to="#" className="btn-hover-filter" >
                             Business
                         </Link>
                     </td>
@@ -25,25 +47,12 @@ function FilterAside () {
 
                 <tr>
                     <td>
-                        <Link to="/" className="icon-filter" >
-                            <i className="fa-solid fa-music fa-2x"></i>
-                        </Link>
-                    </td>
-                    <td>
-                        <Link to="/" className="btn-hover-filter" >
-                            Muziek
-                        </Link>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <Link to="/" className="icon-filter">
+                        <Link to="#" className="icon-filter">
                             <i className="fa-solid fa-user-tie fa-2x"></i>
                         </Link>
                     </td>
                     <td>
-                        <Link to="/" className="btn-hover-filter" >
+                        <Link to="#" className="btn-hover-filter" >
                             Fashion
                         </Link>
                     </td>
@@ -51,12 +60,12 @@ function FilterAside () {
 
                 <tr>
                     <td>
-                        <Link to="/" className="icon-filter">
+                        <Link to="#" className="icon-filter">
                             <i className="fa-solid fa-umbrella-beach fa-2x"></i>
                         </Link>
                     </td>
                     <td>
-                        <Link to="/" className="btn-hover-filter" >
+                        <Link to="#" className="btn-hover-filter" >
                             Vakantie
                         </Link>
                     </td>
@@ -64,12 +73,12 @@ function FilterAside () {
 
                 <tr>
                     <td>
-                        <Link to="/" className="icon-filter">
+                        <Link to="#" className="icon-filter">
                            <i className="fa-solid fa-briefcase-medical fa-2x"></i>
                        </Link>
                     </td>
                     <td>
-                        <Link to="/" className="btn-hover-filter" >
+                        <Link to="#" className="btn-hover-filter" >
                             Zorg
                         </Link>
                     </td>
@@ -77,12 +86,12 @@ function FilterAside () {
 
                 <tr>
                     <td>
-                        <Link to="/" className="icon-filter">
+                        <Link to="#" className="icon-filter">
                             <i className="fa-solid fa-palette fa-2x"></i>
                         </Link>
                     </td>
                     <td>
-                        <Link to="/" className="btn-hover-filter" >
+                        <Link to="#" className="btn-hover-filter" >
                             Kunst
                         </Link>
                     </td>
@@ -90,12 +99,12 @@ function FilterAside () {
 
                 <tr>
                     <td>
-                        <Link to="/" className="icon-filter">
+                        <Link to="#" className="icon-filter">
                             <i className="fa-solid fa-person-running fa-2x"></i>
                         </Link>
                     </td>
                     <td>
-                        <Link to="/" className="btn-hover-filter" >
+                        <Link to="#" className="btn-hover-filter" >
                             Sport
                         </Link>
                     </td>
@@ -103,12 +112,12 @@ function FilterAside () {
 
                 <tr>
                     <td>
-                        <Link to="/" className="icon-filter">
+                        <Link to="#" className="icon-filter">
                             <i className="fa-solid fa-person-rifle fa-2x"></i>
                         </Link>
                     </td>
                     <td>
-                        <Link to="/" className="btn-hover-filter" >
+                        <Link to="#" className="btn-hover-filter" >
                             Oorlogen
                         </Link>
                     </td>
@@ -116,12 +125,12 @@ function FilterAside () {
 
                 <tr>
                     <td>
-                        <Link to="/" className="icon-filter">
+                        <Link to="#" className="icon-filter">
                             <i className="fa-solid fa-microchip fa-2x"></i>
                         </Link>
                     </td>
                     <td>
-                        <Link to="/" className="btn-hover-filter" >
+                        <Link to="#" className="btn-hover-filter" >
                             Technologie
                         </Link>
                     </td>

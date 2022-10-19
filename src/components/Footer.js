@@ -15,7 +15,7 @@ function Footer () {
     return (
 
         <footer className="container-footer">
-            <h>Volg ons op:</h>
+            <h6>Volg ons op:</h6>
 
             <div className="icons-footer">
                 <ul className="icons-social-media">
@@ -24,22 +24,22 @@ function Footer () {
                              <i className="fa-brands fa-youtube fa-1x"></i>
                         </a></li>
                     <li>
-                        <a href="https://youtube.com" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com" rel="noopener noreferrer">
                             <i className="fa-brands fa-facebook fa-1x"></i><
                             /a>
                     </li>
                     <li>
-                        <a href="https://youtube.com" rel="noopener noreferrer">
+                        <a href="https://twitter.com" rel="noopener noreferrer">
                             <i className="fa-brands fa-twitter fa-1x"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://youtube.com" rel="noopener noreferrer">
+                        <a href="instagram.com" rel="noopener noreferrer">
                             <i className="fa-brands fa-instagram-square fa-1x"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://youtube.com" rel="noopener noreferrer">
+                        <a href="instagram.com" rel="noopener noreferrer">
                             <i className="fa-brands fa-snapchat-square fa-1x"></i>
                         </a>
                     </li>

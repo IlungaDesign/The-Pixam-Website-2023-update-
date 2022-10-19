@@ -1,52 +1,50 @@
-// import React, {useContext} from 'react';
+import React, {useContext} from 'react';
 // import TopMenu from "../../components/TopMenu";
 import Footer from "../../components/Footer";
 import './Login.css';
 // import {Link} from "react-router-dom";
 // import TopMenu2 from "../../components/TopMenu2";
 import {useForm} from 'react-hook-form';
-import {NavLink} from "react-router-dom";
+import {NavLink, useHistory} from "react-router-dom";
 import logo from "../../assets/pixam_logo9.png";
-// import {AuthContext} from "../../context/AuthContext"
+import {AuthContext} from "../../context/AuthContext"
 // import * as url from "url";
-// import axios from "axios";
+import axios from "axios";
 
 
 function Login () {
 
-    // const {login} = useContext(AuthContext);
-
-    // async function handleClick() {
-    //     login();
-    //
-    // // loading State op true zetten voor het request
-    //
-    //     try {
-    //     const result = await axios.post('http://localhost:3000/login', {
-    //         username: "user",
-    //         password: "123456",
-    //     });
-    //
-    //     login (result.data.accesToken);
-    // } catch (e) {
-    //         console.error(e.response);
-    //
-    //         // de error in de error state zetten en die aan de gebruiker laten zien
-    //     }
-    //
-    // // Loading state weer op false zetten
-    //
-    // }
+    const history= useHistory()
 
     const { register, handleSubmit, formState:{errors} } = useForm();
 
-    // function handelSubmit2(e) {
-    //     e.preventDefault();
-    //     login()
-    // }
+    const {login} = useContext(AuthContext);
 
-    function onFormSubmit(data) {
-        console.log(data);
+    async function onFormSubmit(data) {
+
+    // loading State op true zetten voor het request
+
+        try {
+        const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin', {
+            username: data.username,
+            password: data.password,
+        });
+
+        login (result.data.accessToken);
+            console.log(result.data)
+
+            console.log(data)
+
+            history.push('/home-page')
+
+    } catch (e) {
+            console.error(e);
+
+            // de error in de error state zetten en die aan de gebruiker laten zien
+        }
+
+    // Loading state weer op false zetten
+
     }
 
     console.log('Errors', errors);
@@ -70,12 +68,11 @@ function Login () {
             <section className="section-login">
 
                 <form
-                    // onSubmit2 ={handelSubmit2}
                       className="left-form"
                       onSubmit={handleSubmit(onFormSubmit)}>
 
                         <h1>Inloggen</h1>
-                        <h>Login als je je een account hebt</h>
+                        <h6>Login als je je een account hebt</h6>
 
                         <a href="/my-pixam" className="facebook-button-registration">
                             <i className="fa-brands fa-facebook "></i>
@@ -87,21 +84,18 @@ function Login () {
                             Ga verder met Google
                         </a>
 
-                        <input
-                        {...register('emailLogin', {
-                        required: 'Email is verplicht',
-                        pattern: {
-                            value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                            message: 'Je moet een geldige email invoeren',
-                        },
-                        })}
-                        type="email"
-                        placeholder="Jouw email.."
-                        id="j-email2"
-                        className="email-login-page"
-                        />
+                    <input type="text"
+                           placeholder="Jouw naam.."
+                           className="name-login2-page"
+                           id="j-naam-login"
 
-                        {errors.emailLogin && <p className="errors-message-login-page">{errors.emailLogin.message}</p>}
+                           {...register("username", {
+                               required: "Naam is verplicht",
+                           })}
+                    />
+
+                    {errors.username && <p className="errors-message-login-page">
+                        {errors.username.message}</p>}
 
                     {/*---------------------------------------------------*/}
 
@@ -109,7 +103,6 @@ function Login () {
                            placeholder="Jouw wachtwoord.."
                            id="j-email2"
                            className="password-login-page"
-                           name="password-login-page"
 
                     {...register("password", {
                         required: "Wachtwoord is verplicht",
@@ -133,7 +126,6 @@ function Login () {
                     <button type="submit"
                             value="login"
                             className="button-login-left-form"
-                            // onClick={handleClick}
                     >
                             Inloggen
                         </button>

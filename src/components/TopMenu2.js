@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import logo from '../assets/pixam_logo9.png';
-import {NavLink} from 'react-router-dom';
+import {NavLink, useHistory} from 'react-router-dom';
 import './TopMenu2.css';
+import {AuthContext} from "../context/AuthContext";
 
 function TopMenu2 () {
+    const {logout, isAuth} = useContext(AuthContext)
+    const history = useHistory();
     return (
 
         <header className="nav-header2">
@@ -25,12 +28,30 @@ function TopMenu2 () {
                         {/*    <NavLink  to="/over-ons" className="hover-menu"> Over ons</NavLink>*/}
                         {/*</li>*/}
 
-                        {/*<li>*/}
-                        {/*    <NavLink to="/contact" className="hover-menu">Contact</NavLink>*/}
-                        {/*</li>*/}
+                        <li>
+                            <NavLink to="/contact" className="hover-menu">Contact</NavLink>
+                        </li>
 
                         <li>
-                            <NavLink  to="/login" className="hover-menu">Uitloggen</NavLink>
+                            {isAuth ?
+                                <button
+                                    type="button"
+                                    onClick={logout}
+                                    className="logout-button-topMenu2"
+                                >
+                                    Uitloggen
+                                </button>
+                                :
+                                <div>
+                                    <button
+                                        type="button"
+                                        onClick={() => history.push('/login')}
+                                    >
+                                        Inloggen
+                                    </button>
+
+                                </div>
+                            }
                         </li>
 
                         <li>

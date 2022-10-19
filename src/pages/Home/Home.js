@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TopMenu from "../../components/TopMenu";
 import SearchBar from "../../components/SearchBar";
 import FilterAside from "../../components/FilterAside";
@@ -16,18 +16,23 @@ import GetImages2 from "../../components/GetImages2";
 
 function HomePage () {
 
+    const [endPoint, setEndPoint] = useState('https://api.unsplash.com/photos?client_id=3sZuQtQVCljncB-BTL7BmeRQGDybQmsP28B4dOybwko');
+
+    const [query, setQuery] = useState('')
+
     return (
         <div>
+            {console.log(endPoint,query)}
             <TopMenu/>     {/*We create the TopMenu*/}
             <TopMenu2/>
-            <SearchBar/>    {/*We create the Searchbar*/}
+            <SearchBar endPoint={endPoint} setEndPoint={setEndPoint}
+                       query={query} setQuery={setQuery}/>    {/*We create the Searchbar*/}
 
             <section className="container-main">     {/*we create a section which will contains the aside filter and the content_galerie*/}
-                <FilterAside/>
-                {/*<FilterAside2/>*/}
-                {/*<GetImages/>*/}
-                <GetImages2/>
-                {/*<PhotoGalerie/>*/}
+                <FilterAside query={query} setQuery={setQuery}/>
+
+                <GetImages2 endPoint={endPoint} setEndPoint={setEndPoint}
+                            query={query} setQuery={setQuery}/>
             </section>
 
 

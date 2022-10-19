@@ -5,16 +5,43 @@ import './RegisterPage.css';
 // import {Link} from "react-router-dom";
 // import TopMenu2 from "../../components/TopMenu2";
 import {useForm} from 'react-hook-form';
-import {NavLink} from "react-router-dom";
+import {NavLink, useHistory} from "react-router-dom";
 import logo from "../../assets/pixam_logo9.png";
+import axios from "axios";
 
 
 function RegisterPage () {
 
     const { register, handleSubmit, formState:{errors} } = useForm();
 
-    function onFormSubmit(data) {
-        console.log(data);
+    const history = useHistory()
+
+    async function onFormSubmit(data) {
+
+        // loading State op true zetten voor het request
+
+        try {
+            const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signup', {
+                username: data.username,
+                email:data.email,
+                password: data.password,
+            });
+
+        history.push('/login')
+
+            // login (result.data.accesToken);
+            console.log(result.data)
+
+            console.log(data)
+
+        } catch (e) {
+            console.error(e.response);
+
+            // de error in de error state zetten en die aan de gebruiker laten zien
+        }
+
+        // Loading state weer op false zetten
+
     }
 
     console.log('Errors', errors);
@@ -59,13 +86,13 @@ function RegisterPage () {
                            className="name-login2-page"
                            id="j-naam-login"
 
-                           {...register("nameLogin", {
+                           {...register("username", {
                                required: "Naam is verplicht",
                            })}
                     />
 
-                    {errors.nameLogin && <p className="errors-message-login-page">
-                        {errors.nameLogin.message}</p>}
+                    {errors.username && <p className="errors-message-login-page">
+                        {errors.username.message}</p>}
 
                     {/*----------------------------------------*/}
 
@@ -74,7 +101,7 @@ function RegisterPage () {
                            placeholder="Jouw email.."
                            id="j-email2"
                            className="email-login2-page"
-                           {...register('emailLogin2', {
+                           {...register('email', {
                                required: 'Email is verplicht',
                                pattern: {
                                    value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -83,8 +110,8 @@ function RegisterPage () {
                            })}
                     />
 
-                    {errors.emailLogin2 && <p className="errors-message-login-page">
-                        {errors.emailLogin2.message}</p>}
+                    {errors.email && <p className="errors-message-login-page">
+                        {errors.email.message}</p>}
 
                     {/*--------------------------------------*/}
 
@@ -94,7 +121,7 @@ function RegisterPage () {
                            id="j-email2"
                            className="password-login2-page"
 
-                           {...register("password2", {
+                           {...register("password", {
                                required: "Wachtwoord is verplicht",
                                pattern: {
                                    value: /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])./,
@@ -107,8 +134,8 @@ function RegisterPage () {
                            })}
                     />
 
-                    {errors.password2 && <p className="errors-message-login-page">
-                        {errors.password2.message}</p>}
+                    {errors.password && <p className="errors-message-login-page">
+                        {errors.password.message}</p>}
 
                     {/*--------------------------------------*/}
 

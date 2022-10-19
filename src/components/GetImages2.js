@@ -3,7 +3,8 @@ import './GetImages2.css';
 import axios from 'axios';
 // import FotoDetails from "../pages/FotoDetails/FotoDetails";
 import {Link} from 'react-router-dom';
-function GetImages2 () {
+
+function GetImages2 ({endPoint, setEndPoint, query, setQuery}) {
 
     const [imagesGalery, seImagesGalery] = useState('');
 
@@ -11,16 +12,27 @@ function GetImages2 () {
 
         async function fetchData() {
             try {
-                const result = await axios.get(`https://api.unsplash.com/photos?client_id=3sZuQtQVCljncB-BTL7BmeRQGDybQmsP28B4dOybwko`);
+                // const result = await axios.get(`https://api.unsplash.com/photos?client_id=3sZuQtQVCljncB-BTL7BmeRQGDybQmsP28B4dOybwko`);
+                // const result = await axios.get('https://api.unsplash.com/search/photos?page=1&query=utrecht&client_id=3sZuQtQVCljncB-BTL7BmeRQGDybQmsP28B4dOybwko');
+                const result = await axios.get(`${endPoint}`);
+
+                if(endPoint === `https://api.unsplash.com/photos?client_id=3sZuQtQVCljncB-BTL7BmeRQGDybQmsP28B4dOybwko` ) {
+                    seImagesGalery(result.data);
+                }
+
+                else{
+                    seImagesGalery(result.data.results);
+                }
+
                 console.log(result.data);
-                seImagesGalery(result.data);
+
             } catch (e) {
                 console.error(e);
             }
         }
         fetchData()
         console.log("We gaan beginnen")
-    },[])
+    },[query])
 
     return (
         <>

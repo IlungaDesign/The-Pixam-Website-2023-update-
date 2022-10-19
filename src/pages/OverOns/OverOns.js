@@ -54,7 +54,7 @@ function OverOns () {
                 <img src={fotoOurHistory} alt="foto_history"/>
 
                 <div className="text-history">
-                    <h>OUR HISTORY</h>
+                    <h6>OUR HISTORY</h6>
                     <h1>Once upon a time…</h1>
 
                     <p>Once upon a time… Sylwia and Paweł Rogowicz lived and worked in Tampere for
@@ -81,7 +81,7 @@ function OverOns () {
             <section className="section-value-text">
 
                 <div className='text-left'>
-                    <h>OUR VALUES</h>
+                    <h6>OUR VALUES</h6>
                     <h1>We follow values that shape our activities.</h1>
                 </div>
 
@@ -123,7 +123,7 @@ function OverOns () {
             </section>
 
             <section className="section-our-team">
-                <h>Our Team</h>
+                <h6>Our Team</h6>
 
                 <div className="our-team">
                     <div>
@@ -148,7 +148,7 @@ function OverOns () {
 
             <section className="creating-value">
                 <div>
-                    <h>WAT WE DO</h>
+                    <h6>WAT WE DO</h6>
 
                     <h1>Creating value</h1>
                     <h2>Through digital transformation</h2>

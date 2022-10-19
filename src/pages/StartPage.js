@@ -40,7 +40,7 @@ function StartPage () {
                     om gratis afbeeldingen naar <br/>
                     keuze te downloaden</h1>
 
-                <Link to="/" className ="probeer-button">
+                <Link to="/login" className ="probeer-button">
                     Zoek een afbeelding
                 </Link>
 
