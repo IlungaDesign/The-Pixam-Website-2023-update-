@@ -25,7 +25,7 @@ function TopMenu () {
 
                     <ul >
                         <li>
-                            <NavLink  activeClassName="active-link" to="/home-page" exact className="hover-menu" >Afbeeldingen</NavLink>
+                            <NavLink activeClassName="active-link" to="/home-page" exact className="hover-menu" >Afbeeldingen</NavLink>
                         </li>
 
                         {/*<li>*/}

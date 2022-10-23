@@ -1,9 +1,9 @@
 import React from 'react';
 import './SearchBar.css';
-import axios from 'axios'
-import {get} from "react-hook-form";
+// import axios from 'axios'
+// import {get} from "react-hook-form";
 
-function SearchBar ({endPoint, setEndPoint, query, setQuery}) {
+function SearchBar ({setEndPoint}) {
 
     // async function getData(){
     //     try{
@@ -16,20 +16,20 @@ function SearchBar ({endPoint, setEndPoint, query, setQuery}) {
     // }
     // getData()
 
-    function clickhandler(e) {
-        // e.preventDefault()
+    function onChange(e) {
+        e.preventDefault()
 
         console.log(e.target.value)
 
-            setQuery(`https://api.unsplash.com/search/photos?page=1&query=${e.target.value}&client_id=3sZuQtQVCljncB-BTL7BmeRQGDybQmsP28B4dOybwko`)
-            setEndPoint(query)
+            setEndPoint(`https://api.unsplash.com/search/photos?page=1&query=${e.target.value}&client_id=3sZuQtQVCljncB-BTL7BmeRQGDybQmsP28B4dOybwko`)
 
     }
 
     return (
         <section className="section-searchbar">
             <div className="container-searchbar">
-                <form className="form-search" action="#">
+                <form className="form-search" action="#"
+                onSubmit={onChange}>
                     <button type="submit" className="button-search"
                     >
                         <i className="fa fa-search"></i>
@@ -38,15 +38,15 @@ function SearchBar ({endPoint, setEndPoint, query, setQuery}) {
                     <input type="text"
                            placeholder="     Zoek op trefwoord.."
                            name="search"
-                           onChange={clickhandler}
+                           onChange={onChange}
                     />
+
+                    <button type="submit" className="button-search-2"
+                    >
+                        Zoeken
+                    </button>
                 </form>
             </div>
-            <button type="button" className="button-search-2"
-                    // onClick={clickhandler}
-                >
-                Zoeken
-            </button>
         </section>
 
     );

@@ -10,7 +10,7 @@
 }
 
 .image-box {
-    background-color: pink;
+    /*background-color: pink;*/
     width: 300px;
     height: 300px;
     border: 1px solid black;
@@ -19,7 +19,6 @@
     margin-top: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 
@@ -39,7 +38,6 @@
     /*background-color: yellow;*/
     width: 83%;
     display: flex;
-
     /*justify-content: center;*/
     flex-wrap: wrap;
     /*overflow: hidden;*/
@@ -110,12 +108,13 @@
     .section-images {
         /*z-index: -2;*/
         margin-left: 30px;
-        margin-top: 215px;
+        margin-top: 30px;
     }
 
     .unsplash-Image {
         width: 330px;
     }
+
 }
 
 

@@ -62,7 +62,7 @@ and profiel-online*/
     color: #008bff;
     margin-bottom: 10px;
     font-size: 22px;
-    margin-left: 120px;
+    margin-left: 80px;
     margin-top: 30px;
 }
 
@@ -177,7 +177,7 @@ and profiel-online*/
 @media screen and (max-width: 576px) {
     .my-pixam {
         height: 90vh;
-        margin-top: 110px;
+        margin-top: 0px;
     }
 
     .section-register {
@@ -192,6 +192,14 @@ and profiel-online*/
         height: 100vh;
         width: 100%;
         margin-left: 0px;
+    }
+
+    .profiel-online h1 {
+        color: #008bff;
+        margin-bottom: 10px;
+        font-size: 21px;
+        margin-left: 80px;
+        margin-top: 30px;
     }
 
     .profiel-online label {

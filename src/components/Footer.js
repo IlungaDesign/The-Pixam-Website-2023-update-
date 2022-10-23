@@ -15,7 +15,7 @@ function Footer () {
     return (
 
         <footer className="container-footer">
-            <h6>Volg ons op:</h6>
+            <h>Volg ons op:</h>
 
             <div className="icons-footer">
                 <ul className="icons-social-media">

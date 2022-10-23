@@ -90,3 +90,98 @@
 }
 
 
+@media screen and (max-width: 576px) {
+
+    .container-footer {
+        /*background-color: #e5e6e7;*/
+        /*max-width: 100%;*/
+        /*height: 320px;*/
+        display: none;
+        /*flex-direction: column;*/
+        /*align-items: center;*/
+        /*gap:35px;*/
+        /*z-index: 5;*/
+    }
+
+    /*2) We style the h of the footer*/
+
+    /*.container-footer h{*/
+    /*    !*font-weight: bold;*!*/
+    /*    !*color: #73767e;*!*/
+    /*    !*font-size: 14px;*!*/
+    /*    !*padding-top: 40px;*!*/
+    /*}*/
+
+    /*!*3) We style the social media icons of the footer*!*/
+
+    /*.icons-social-media {*/
+    /*    display: flex;*/
+    /*    gap: 20px;*/
+    /*    list-style-type: none;*/
+    /*}*/
+
+    /*.icons-social-media li a{*/
+    /*    color: #73767e;*/
+    /*    font-size: 20px;*/
+    /*}*/
+
+    /*.icons-social-media li a:hover{*/
+    /*    color: #02be6e;*/
+    /*}*/
+
+    /*!*4) We style the text p of the footer*!*/
+
+    /*.container-footer p{*/
+    /*    font-weight: normal;*/
+    /*    color: #73767e;*/
+    /*    font-size: 14px;*/
+    /*}*/
+
+    /*!*5) We style the newsletter of the footer*!*/
+
+    /*.form-footer {*/
+    /*    display: flex;*/
+    /*    gap: 20px;*/
+    /*}*/
+
+    /*.form-footer input[type=text] {*/
+    /*    width: 180px;*/
+    /*    height: 40px;*/
+    /*    font-size: 12px;*/
+    /*    border-radius: 30px;*/
+    /*    border: 0px solid #b4b4b4;*/
+    /*    padding-left: 20px;*/
+    /*}*/
+
+    /*.form-footer ::placeholder {*/
+    /*    color: #b4b4b4;*/
+    /*    font-size: 14px;*/
+    /*}*/
+
+    /*.form-footer input[type=submit] {*/
+    /*    color: white;*/
+    /*    width: 100px;*/
+    /*    height: 40px;*/
+    /*    background-color: #02be6e;*/
+    /*    border-radius: 30px;*/
+    /*    padding: 7px;*/
+    /*    border:none;*/
+    /*}*/
+
+    /*.form-footer input[type=submit]:hover {*/
+    /*    background-color: #028f53;*/
+    /*}*/
+
+    /*.container-footer .text-copyright {*/
+    /*    font-weight: normal;*/
+    /*    color: #73767e;*/
+    /*    font-size: 10px;*/
+    /*}*/
+
+    /*.container-footer .errors-message-footer-page2 {*/
+    /*    color: red;*/
+    /*    font-size: 12px;*/
+    /*    !*background-color: red;*!*/
+    /*}*/
+
+}

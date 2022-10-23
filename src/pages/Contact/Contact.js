@@ -120,7 +120,7 @@ function Contact () {
 
                 <div className="section-contact-text">
 
-                    <br/><br/><h6>NEEM CONTACT MET ONS OP</h6><br/><br/>
+                    <br/><br/><h>NEEM CONTACT MET ONS OP</h><br/><br/>
 
                     <p1>Onze expert</p1><br/>
                     <p1>Michael Ilunga</p1><br/>

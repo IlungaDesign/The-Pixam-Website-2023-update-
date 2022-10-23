@@ -4,7 +4,7 @@ import axios from 'axios';
 // import FotoDetails from "../pages/FotoDetails/FotoDetails";
 import {Link} from 'react-router-dom';
 
-function GetImages2 ({endPoint, setEndPoint, query, setQuery}) {
+function GetImages2 ({endPoint}) {
 
     const [imagesGalery, seImagesGalery] = useState('');
 
@@ -32,7 +32,7 @@ function GetImages2 ({endPoint, setEndPoint, query, setQuery}) {
         }
         fetchData()
         console.log("We gaan beginnen")
-    },[query])
+    },[endPoint])
 
     return (
         <>
@@ -65,8 +65,13 @@ function GetImages2 ({endPoint, setEndPoint, query, setQuery}) {
                     })}
                 </>
                 }
+            </div>
+
+            <div className="footer-Afbeeldingen">
 
             </div>
+
+            {/*<footer/>*/}
 
         </>
 
