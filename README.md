@@ -30,7 +30,7 @@ Zo ziet de inlogpagina van de applicatie Pixam eruit;
 ###2. Applicatie starten
 
 Voordat u het project start, moet u het eerst clonen naar jouw locale machine door 
-[hier](https://github.com/hogeschoolnovi/frontend-fake-server) te klikken.
+[hier](https://github.com/IlungaDesign/ilunga-pixam-encore) te klikken.
 Nadat u het project hebt gecloned,
 installeert u eerst de node_modules door het volgende commando 
 in de terminal te typen:
