@@ -1,0 +1,8 @@
+/*--------------Container-main zit in de page `Home`-------------------*/
+
+.container-main {
+    height: auto;
+    display:flex;
+    flex-grow: 1;
+    gap: 20px;
+}

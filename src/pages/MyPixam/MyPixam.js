@@ -1,11 +1,9 @@
 import React from 'react';
-import TopMenu from "../../components/TopMenu";
-import TopMenu2 from "../../components/TopMenu2";
+import TopMenu from "../../components/TopMenu/TopMenu";
+import TopMenu2 from "../../components/TopMenu2/TopMenu2";
 import './MyPixam.css';
-import Footer from "../../components/Footer";
-// import uploadPicture from "../images/icon_picture_upload5.png"
-// import fotoOurHistory from "../images/employer.png";
-// import {Link} from 'react-router-dom';
+import Footer from "../../components/Footer/Footer";
+import {Link} from 'react-router-dom';
 import {useForm} from 'react-hook-form';
 
 
@@ -28,8 +26,6 @@ function MyPixam () {
 
                 <section className="section-register">
 
-                    {/*-------------------------------------------------*/}
-
                     <div className="profiel-online">
 
                         <h1>Mijn inloggegevens wijzigen</h1>
@@ -43,19 +39,12 @@ function MyPixam () {
                                        name="city"/>
                             </div>
 
-
-                            {/*-------------------------------------------------*/}
-
                             <div>
                                 <label htmlFor="e-mail-wijzigen">Je e-mail wijzigen:</label>
                                 <input type="text" id="e-mail-wijzigen"
                                        placeholder="Je e-mail..."
                                        name="e-mail-wijzigen"/>
                             </div>
-
-                            {/*-------------------------------------------------*/}
-
-                            {/*-------------------------------------------------*/}
 
                             <div>
                                 <label htmlFor="wachtwoord">Je wachtwoord:</label>
@@ -105,8 +94,8 @@ function MyPixam () {
 
                             <div className="profiel-online-social-media">
                                 <label htmlFor="lastName">Registreren met:</label>
-                                <a href="#" className="facebook-button-mypixam">Facebook</a>
-                                <a href="#" className="google-button-mypixam">Google</a>
+                                <Link to="#" className="facebook-button-mypixam">Facebook</Link>
+                                <Link to="#" className="google-button-mypixam">Google</Link>
                             </div>
 
 

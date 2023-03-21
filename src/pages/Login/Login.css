@@ -3,7 +3,6 @@
     margin: 0;
 }
 
-
 .navbar-start-page2 {
     max-width: 100%;
     height: 90px;
@@ -37,17 +36,14 @@
     height: 120vh;
     display: flex;
     justify-content: center;
-    /*align-items: center;*/
-    /*gap: 50px;*/
     margin-top: 70px;
     font-family: Poppins;
 
 }
 
-/*-------we start styling the left (section-login) here------*/
+/*-------De styling van de login formulier------*/
 
 .left-form {
-    /*background-color:yellow;*/
     height: 57%;
     width: 350px;
     margin-top: 0px;
@@ -57,7 +53,6 @@
     align-items: center;
     gap: 10px;
     border: 1px solid #dedcdc;
-
 }
 
 .left-form h1{
@@ -124,9 +119,6 @@
     border-radius: 50px;
 }
 
-/*------i'm putting here the gap between the icon (facebook & google) and the*/
-/*text (ga verder met...)'*/
-
 .google-button-registration i {
     padding-right: 20px;
     font-size: 21px;
@@ -136,8 +128,6 @@
     padding-right: 20px;
     font-size: 21px;
 }
-
-/*-------------------*/
 
 .left-form input{
     border-radius: 50px;
@@ -164,14 +154,9 @@
     background-color: #028f53;
 }
 
-/*-------we start styling the right (section-login) form here------*/
-
-
-
-/*--------media query (screen 576px)--------*/
+/*--------De media query met de (max-width: 576px)------*/
 
 @media screen and (max-width: 576px) {
-
 
     .navbar-start-page2 {
         max-width: 100%;
@@ -205,16 +190,11 @@
         height: 100vh;
         display: flex;
         justify-content: center;
-        /*align-items: center;*/
-        /*gap: 50px;*/
         font-family: Poppins;
         margin-top: 50px;
-
-
     }
 
     .left-form {
-        /*background-color:yellow;*/
         height: 70%;
         width: 350px;
         border-radius: 20px;
@@ -225,15 +205,4 @@
         border: 1px solid #dedcdc;
     }
 
-    /*.left-form {*/
-    /*    margin-top: 0px;*/
-    /*    height: 34%;*/
-    /*}*/
-
-    .right-form {
-        height: 50%;
-        margin-bottom: 30px;
-        margin-top: 0px;
-
-    }
 }

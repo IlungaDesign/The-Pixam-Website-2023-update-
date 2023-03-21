@@ -1,10 +1,9 @@
 import React from 'react';
-import TopMenu from "../../components/TopMenu";
-import Footer from "../../components/Footer";
+import TopMenu from "../../components/TopMenu/TopMenu";
+import Footer from "../../components/Footer/Footer";
 import './Contact.css';
 import {useForm} from 'react-hook-form';
-import TopMenu2 from "../../components/TopMenu2"
-
+import TopMenu2 from "../../components/TopMenu2/TopMenu2"
 
 function Contact () {
 
@@ -28,7 +27,7 @@ function Contact () {
                     <form onSubmit={handleSubmit(onFormSubmit)}>
 
                         <label>
-                        <input type="text"
+                           <input type="text"
                                placeholder="Jouw naam.."
                                className="name1"
                                id="j-naam"
@@ -39,11 +38,11 @@ function Contact () {
                                        message: "Naam moet minimaal 3 karakters bevatten"
                                    },
                                })}
-                        />
-                        {errors.name && <p className="errors-style">{errors.name.message}</p>}
-                        </label>
+                           />
 
-                        {/*--------------*/}
+                        {errors.name && <p className="errors-style">{errors.name.message}</p>}
+
+                        </label>
 
                         <input
                             placeholder="Email"
@@ -61,8 +60,6 @@ function Contact () {
 
                         {errors.email&&<p className="errors-style">{errors.email.message}</p>}
 
-                        {/*--------------*/}
-
                         <input
                             placeholder="telefoonummer"
                             {...register('telefoonummer', {
@@ -75,11 +72,6 @@ function Contact () {
                                     value: 10,
                                     message: 'Voer alstublieft een geldig telefoonnummer in'
                                 }
-                                // pattern: {
-                                //     value:  /[0-9]|\./,
-                                //     // value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                                //     ,
-                                // },
                             })}
                             type="number"
                             required
@@ -88,13 +80,8 @@ function Contact () {
 
                         {errors.telefoonummer && <p className="errors-style">{errors.telefoonummer.message}</p>}
 
-
-                        {/*---------------*/}
-
                         <label>
-
-
-                        <textarea id="subject-id"
+                            <textarea id="subject-id"
                                   className="textarea1"
                                   placeholder="Schrijf iets .."
                                   rows="4"
@@ -104,16 +91,14 @@ function Contact () {
                                 value: 5,
                                 message: "Opmerking mag maximaal 50 karakters bevatten"},
                             })}
-                        >
+                            >
                             </textarea>
 
                             {errors.subject && <p className="errors-style">{errors.subject.message}</p>}
 
                         </label>
 
-                        <button type="submit"
-                                value="contact">verstuur
-                        </button>
+                        <button type="submit" value="contact">verstuur</button>
                     </form>
 
                 </div>
@@ -129,20 +114,16 @@ function Contact () {
                     <p>+3178365123e</p><br/>
                     <p1>Vind ons op :</p1>
 
-
                     <ul className="icons-social-contact">
-                        <li><a href="https://www.youtube.com"><i className="fa-brands fa-youtube fa-1x"></i></a></li>
-                        <li><a href="https://www.facebook.com"><i className="fa-brands fa-facebook fa-1x"></i></a></li>
-                        <li><a href="https://twitter.com"><i className="fa-brands fa-twitter fa-1x"></i></a></li>
-                        <li><a href="https://www.instagram.com"><i className="fa-brands fa-instagram-square fa-1x"></i></a></li>
-                        <li><a href="https://accounts.snapchat.com"><i className="fa-brands fa-snapchat-square fa-1x"></i></a></li>
+                        <li><a href="https://www.youtube.com" target="_blank" class="icon-social-media-contact"><i className="fa-brands fa-youtube fa-1x"></i></a></li>
+                        <li><a href="https://www.facebook.com" target="_blank" class="icon-social-media-contact"><i className="fa-brands fa-facebook fa-1x"></i></a></li>
+                        <li><a href="https://twitter.com" target="_blank" class="icon-social-media-contact"><i className="fa-brands fa-twitter fa-1x"></i></a></li>
+                        <li><a href="https://www.instagram.com" target="_blank" class="icon-social-media-contact"><i className="fa-brands fa-instagram-square fa-1x"></i></a></li>
+                        <li><a href="https://accounts.snapchat.com" target="_blank" class="icon-social-media-contact"><i className="fa-brands fa-snapchat-square fa-1x"></i></a></li>
                     </ul>
                 </div>
-
             </section>
-
             <Footer/>
-
         </>
     );
 }

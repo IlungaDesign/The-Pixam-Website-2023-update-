@@ -1,13 +1,10 @@
 import './FotoDetails.css';
-import TopMenu from "../../components/TopMenu";
-import TopMenu2 from "../../components/TopMenu2";
-import SearchBar from "../../components/SearchBar";
-import FilterAside from "../../components/FilterAside";
-import Footer from "../../components/Footer";
-// import blabla3 from '../../assets/blabla.png';
-// import worker3 from '../../images/worker3.png';
-// import GetImages2 from "../../components/GetImages2";
-import {useParams} from "react-router-dom";       // (1) Ik importer {useParams} hier
+import TopMenu from "../../components/TopMenu/TopMenu";
+import TopMenu2 from "../../components/TopMenu2/TopMenu2";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import FilterAside from "../../components/FilterAside/FilterAside";
+import Footer from "../../components/Footer/Footer";
+import {useParams} from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {saveAs} from 'file-saver'
@@ -16,7 +13,7 @@ function FotoDetails () {
 
     const [imagesGalery, setImagesGalery] = useState({})
 
-    const { imageId } = useParams();      //(2) Ik schrijf de useParams functie, hier met de id 'imageId' die ik in App.js heb geroepen. Deze id moet hetzelfde zijn als die van de Route.
+    const { imageId } = useParams();
 
 useEffect(() => {
     async function fetchData() {
@@ -29,6 +26,7 @@ useEffect(() => {
         }
     }
     fetchData()
+    // eslint-disable-next-line
 },[])
 
     const downloadImage = () => {
@@ -38,10 +36,10 @@ useEffect(() => {
     return (
 
         <div>
-            <TopMenu/>     {/*We create the TopMenu*/}
+            <TopMenu/>
             <TopMenu2/>
-            <SearchBar/>    {/*We create the Searchbar*/}
-            <section className="container-main">     {/*we create a section which will contains the aside filter and the content_galerie*/}
+            <SearchBar/>
+            <section className="container-main">
                 <FilterAside/>
 
                 {Object.keys(imagesGalery).length > 0 &&
@@ -65,12 +63,12 @@ useEffect(() => {
                         </div>
                         <button type="button" onClick={downloadImage} className="button-download-fotodetails">Downloaden</button>
                     </div>
-                    {/*(4) Hier geef ik aan wat ik wil laten zien, welke data ik wil renderen*/}
+
                 </div>
                 }
 
             </section>
-            <Footer/>     {/*  we create the footer here*/}
+            <Footer/>
         </div>
     );
 }

@@ -1,9 +1,7 @@
 import React from 'react';
-// import TopMenu from "../../components/TopMenu";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer/Footer";
 import './RegisterPage.css';
-// import {Link} from "react-router-dom";
-// import TopMenu2 from "../../components/TopMenu2";
+import {Link} from "react-router-dom";
 import {useForm} from 'react-hook-form';
 import {NavLink, useHistory} from "react-router-dom";
 import logo from "../../assets/pixam_logo9.png";
@@ -18,8 +16,6 @@ function RegisterPage () {
 
     async function onFormSubmit(data) {
 
-        // loading State op true zetten voor het request
-
         try {
             const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signup', {
                 username: data.username,
@@ -29,7 +25,6 @@ function RegisterPage () {
 
         history.push('/login')
 
-            // login (result.data.accesToken);
             console.log(result.data)
 
             console.log(data)
@@ -37,11 +32,7 @@ function RegisterPage () {
         } catch (e) {
             console.error(e.response);
 
-            // de error in de error state zetten en die aan de gebruiker laten zien
         }
-
-        // Loading state weer op false zetten
-
     }
 
     console.log('Errors', errors);
@@ -49,9 +40,6 @@ function RegisterPage () {
     return (
 
         <>
-            {/*<TopMenu/>*/}
-            {/*<TopMenu2/>*/}
-
             <nav className="navbar-start-page3">
                 <NavLink to="/"><img src={logo} alt="logo-pixam" className="logo-pixam"/></NavLink>
                 <ul className="register-register-button3">
@@ -73,18 +61,18 @@ function RegisterPage () {
                     <h1>Registreren</h1>
                     <h>Schijf in als je nog geen account hebt</h>
 
-                    <a href="/my-pixam" className="facebook-button-registration"><i className="fa-brands fa-facebook "></i>
+                    <Link to="/my-pixam" className="facebook-button-registration"><i className="fa-brands fa-facebook "></i>
                         Ga verder met facebook
-                    </a>
+                    </Link>
 
-                    <a href="/my-pixam" className="google-button-registration"><i className="fa-brands fa-google"></i>
+                    <Link to="/my-pixam" className="google-button-registration"><i className="fa-brands fa-google"></i>
                         Ga verder met Google
-                    </a>
+                    </Link>
 
                     <input type="text"
                            placeholder="Jouw naam.."
                            className="name-login2-page"
-                           id="j-naam-login"
+                           id="#"
 
                            {...register("username", {
                                required: "Naam is verplicht",
@@ -99,7 +87,7 @@ function RegisterPage () {
 
                     <input type="email"
                            placeholder="Jouw email.."
-                           id="j-email2"
+                           id="#"
                            className="email-login2-page"
                            {...register('email', {
                                required: 'Email is verplicht',
@@ -118,7 +106,7 @@ function RegisterPage () {
 
                     <input type="password"
                            placeholder="Jouw wachtwoord.."
-                           id="j-email2"
+                           id="#"
                            className="password-login2-page"
 
                            {...register("password", {
@@ -151,7 +139,7 @@ function RegisterPage () {
                     <div className="check-box-items">
                         <input type="checkbox"
                                className="checkbox-register-page"
-                               id="terms-and-conditions"
+                               id="#"
                                value="check"
 
                                {...register("checkboxRegister", {

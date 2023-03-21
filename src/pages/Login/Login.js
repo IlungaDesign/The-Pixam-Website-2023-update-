@@ -1,16 +1,12 @@
 import React, {useContext} from 'react';
-// import TopMenu from "../../components/TopMenu";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer/Footer";
 import './Login.css';
-// import {Link} from "react-router-dom";
-// import TopMenu2 from "../../components/TopMenu2";
+import {Link} from "react-router-dom";
 import {useForm} from 'react-hook-form';
 import {NavLink, useHistory} from "react-router-dom";
 import logo from "../../assets/pixam_logo9.png";
 import {AuthContext} from "../../context/AuthContext"
-// import * as url from "url";
 import axios from "axios";
-
 
 function Login () {
 
@@ -21,8 +17,6 @@ function Login () {
     const {login} = useContext(AuthContext);
 
     async function onFormSubmit(data) {
-
-    // loading State op true zetten voor het request
 
         try {
         const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin', {
@@ -39,12 +33,7 @@ function Login () {
 
     } catch (e) {
             console.error(e);
-
-            // de error in de error state zetten en die aan de gebruiker laten zien
         }
-
-    // Loading state weer op false zetten
-
     }
 
     console.log('Errors', errors);
@@ -74,15 +63,15 @@ function Login () {
                         <h1>Inloggen</h1>
                         <h6>Login als je je een account hebt</h6>
 
-                        <a href="/my-pixam" className="facebook-button-registration">
+                        <Link to="/my-pixam" className="facebook-button-registration">
                             <i className="fa-brands fa-facebook "></i>
                             Ga verder met facebook
-                        </a>
+                        </Link>
 
-                        <a href="/my-pixam" className="google-button-registration">
+                        <Link to="/my-pixam" className="google-button-registration">
                             <i className="fa-brands fa-google"></i>
                             Ga verder met Google
-                        </a>
+                        </Link>
 
                     <input type="text"
                            placeholder="Jouw naam.."
@@ -130,14 +119,11 @@ function Login () {
                             Inloggen
                         </button>
 
-                    {/*--------------------------------------*/}
-
                 </form>
-
 
             </section>
 
-            <Footer/>
+          <Footer/>
         </>
     );
 }

@@ -5,8 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AuthContextProvider from "./context/AuthContext";
 import { BrowserRouter as Router} from "react-router-dom";
-// // import home from './home/home';
-// import './home.css';
 
 ReactDOM.render(
 

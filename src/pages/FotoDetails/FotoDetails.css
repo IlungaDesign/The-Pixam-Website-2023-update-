@@ -1,28 +1,19 @@
 .container-main {
-    /*background-color: yellow;*/
-    /*width: 100%;*/
-    /*height: 100vh;*/
 }
 
 .foto-details {
-    /*background-color: #9a9a9a;*/
     width: 70%;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /*border: 1px solid #dedcdc;*/
     background-color: #f1f8fc;
 }
 
 .section-foto-Details {
-    /*background-color: red;*/
     width: 1300px;
     height: 80vh;
     display: flex;
-    /*justify-content: center;*/
-    /*justify-content: space-around;*/
-    /*border: 1px solid #b4b4b4;*/
     margin-top: 20px;
     gap: 20px;
 }
@@ -30,16 +21,9 @@
 .blabla3 {
     max-width: 100%;
     max-height: 100%;
-    /*margin-top: 20px;*/
-    /*margin-bottom: 20px;*/
-    /*margin: 20px;*/
-    /*padding: 20px;*/
-    /*object-fit: cover;*/
-    /*contain: content;*/
 }
 
 .section-information-foto-details {
-    /*background-color: #ff7e00;*/
     width: 300px;
     height:300px;
     display: flex;
@@ -47,11 +31,9 @@
     align-items: center;
     gap:60px;
     margin-top: 20px;
-    /*background-color: #008bff;*/
 }
 
 .section-insta-name {
-    /*background-color: yellow;*/
     width: 340px;
     height:100px;
     margin-top: 50px;
@@ -87,12 +69,12 @@
 
 .button-download-fotodetails:hover {
     background-color: #028f53;
-
 }
+
+/*--------De media query met de (max-width: 576px)------*/
 
 @media screen and (max-width: 576px) {
     .container-main {
-        /*background-color: yellow;*/
         width: 100%;
         height: 90vh;
     }
@@ -103,19 +85,16 @@
     }
 
     .foto-details {
-        /*background-color: #9a9a9a;*/
         width: 80%;
         height: 50vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        /*border: 1px solid #dedcdc;*/
         background-color: #f1f8fc;
         margin-top: 20px;
     }
 
     .section-foto-Details {
-        /*background-color: red;*/
         width: 100%;
         height: 100vh;
         display: flex;
@@ -125,19 +104,15 @@
     }
 
     .section-information-foto-details {
-        /*background-color: #ff7e00;*/
         width: 100%;
         height:230px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap:30px;
-        /*margin-top: 20px;*/
-        /*background-color: #008bff;*/
     }
 
     .section-insta-name {
-        /*background-color: yellow;*/
         width: 320px;
         height:100px;
         margin-top: 0px;
@@ -145,7 +120,6 @@
         align-items: center;
         gap: 20px;
         margin-right: 70px;
-        /*background-color: #ff7e00;*/
     }
 
     .section-foto-details-worker3 {

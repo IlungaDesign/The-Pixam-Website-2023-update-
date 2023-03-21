@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Poppins ;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*!*----------De styling van de nav van de TopMenu------------*/
+
+.container-nav {
+    max-width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 150px;
+    border-bottom: 1px solid #dedcdc;
+}
+
+/*!*----------De styling van de logo------------*/
+
+.logo-pixam {
+    width:100px;
+    height:60px;
+}
+
+/*----De styling van de menu buttons van de nav (binnen de TopMenu)------*/
+
+.container-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.hover-menu {
+    color: black;
+    text-decoration: none;
+}
+
+.hover-menu:hover {
+    color: #02be6e;
+}
+
+.hover-mypixam {
+    color: #02be6e;
+}
+
+.hover-mypixam:hover {
+    color:#028f53;
+}
+
+.logout-button {
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    font-family: Poppins;
+}
+
+.logout-button:hover {
+    color: #02be6e;
+}
+
+.active-link {
+    color: #02be6e;
+}
+
+.container-my-Pixam {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #02be6e;
+    font-size: 14px;
+}
+
+.checkbtn {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#link-my-pixam {
+    display: none;
+}
+
+.container-nav2 {
+    display:none;
+}
+
+.mypixam-link {
+    color: #02be6e;
+    text-decoration: none;
+}
+
+.mypixam-link:hover {
+    color: #028f53;
+    text-decoration: none;
+}
+
+/*--------De media query met de (max-width: 992px)------*/
+
+@media screen and (max-width: 992px) {
+    .hover-mypixam h{
+        display: none;
+    }
+    .container-nav {
+        gap: 30px;
+    }
+}
+
+/*--------De media query met de (max-width: 576px)------*/
+
+@media screen and (max-width: 576px) {
+    .app-header {
+        display: none;
+        /*z-index: -1;*/
+    }
+}
+
+

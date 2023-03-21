@@ -9,10 +9,9 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    /*background-color: yellow;*/
 }
 
-/*-------we style here the contact form with the className (section-contact-form)-------*/
+/*--------De styling van de contact form------*/
 
 .section-contact-form {
     width: 42%;
@@ -43,7 +42,6 @@
     resize: vertical;
     font-family: Poppins;
     margin-left: 100px;
-    /*background-color: pink;*/
 }
 
 .email1 {
@@ -57,7 +55,6 @@
     resize: vertical;
     font-family: Poppins;
     margin-left: 100px;
-    /*background-color: dodgerblue;*/
 }
 
 .phone-number1 {
@@ -71,7 +68,6 @@
     resize: vertical;
     font-family: Poppins;
     margin-left: 100px;
-    /*background-color: #ff7e00;*/
 }
 
 .phone-number1::-webkit-inner-spin-button,
@@ -92,15 +88,7 @@
     resize: vertical;
     font-family: Poppins;
     margin-left: 100px;
-    /*background-color:#9a9a9a;*/
 }
-
-/*input[type=number]::-webkit-inner-spin-button,*/
-/*input[type=number]::-webkit-outer-spin-button {*/
-/*    -webkit-appearance: none;*/
-/*    -moz-appearance: none;*/
-/*    appearance: none;*/
-/*}*/
 
 .errors-style {
 color: red;
@@ -110,7 +98,6 @@ padding: 5px;
 width: 70%;
     border: 1px solid red;
 }
-
 
 .section-contact-form form .schrijven {
     height: 100px;
@@ -132,10 +119,9 @@ width: 70%;
     background-color: #028f53;
 }
 
-/*-------we style here the text of the contact form named (section-contact-text)---*/
+/*-------De styling van de text van de contact form in (section-contact-text)------*/
 
 .section-contact-text {
-    /*width: 300px;*/
     height: 72vh;
     margin-top: 50px;
     background-color: #008bff;
@@ -152,7 +138,6 @@ width: 70%;
     margin-left: 40px;
     font-weight: bolder;
     color: white;
-
 }
 
 .section-contact-text p {
@@ -163,8 +148,6 @@ width: 70%;
 .section-contact-text .icons-social-contact {
     display: flex;
     gap: 10px;
-    /*font-size: 20px;*/
-    color: white;
     text-decoration: none;
     list-style-type: none;
     margin-left: 90px;
@@ -172,17 +155,16 @@ width: 70%;
     color: white;
 }
 
-.section-contact-text .icons-social-contact li a i{
+.icon-social-media-contact {
     color: white;
     font-size: 20px;
 }
 
-.section-contact-text .icons-social-contact li a i:hover{
+.icon-social-media-contact:hover{
     color: #c0dffb;
 }
 
-/*------media screen (992px)-----------------*/
-/*----------------------------------------------*/
+/*--------De media query met de (max-width: 999px)------*/
 
 @media screen and (max-width: 999px) {
 
@@ -193,8 +175,6 @@ width: 70%;
         flex-direction: column;
         align-items: center;
     }
-
-    /*-------the contact form with the className (section-contact-form)-------*/
 
     .section-contact-form {
         width: 90%;
@@ -218,8 +198,6 @@ width: 70%;
         margin-left: 360px;
         margin-top: 10px;
     }
-
-    /*------- the contact form (section-contact-text)---*/
 
     .section-contact-text {
         width: 90%;
@@ -248,8 +226,7 @@ width: 70%;
 
 }
 
-/*------media screen (576px)-----------------*/
-/*----------------------------------------------*/
+/*--------De media query met de (max-width: 576px)------*/
 
 @media screen and (max-width: 576px) {
     .section-contact {
@@ -258,20 +235,14 @@ width: 70%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /*background-color: red;*/
         margin-top: 150px;
     }
-
-    /*-------the contact form with the className (section-contact-form)-------*/
 
     .section-contact-form {
         width: 90%;
         height: 65vh;
-        /*margin-top: -100px;*/
-        /*background-color: white;*/
         border-radius: 20px;
         border: 1px solid #dedcdc;
-        /*background-color: red;*/
     }
 
     .section-contact-form input[type=text], select, textarea {
@@ -309,7 +280,6 @@ width: 70%;
         resize: vertical;
         font-family: Poppins;
         margin-left: 35px;
-        /*background-color:#9a9a9a;*/
     }
 
     .section-contact-form button[type=submit] {
@@ -319,13 +289,10 @@ width: 70%;
         margin-top: 10px;
     }
 
-    /*------- the contact form (section-contact-text)---*/
-
     .section-contact-text {
         width: 90%;
         height: 47vh;
         margin-top: 20px;
-        /*padding-bottom: 20px;*/
     }
 
     .section-contact-text h {
@@ -347,7 +314,6 @@ width: 70%;
     .section-contact-text .icons-social-contact {
         display: flex;
         gap: 10px;
-        /*font-size: 20px;*/
         color: white;
         text-decoration: none;
         list-style-type: none;
